@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barecce - Social Media Agency</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-logo">
+            <img src="images/brand-logo-orange.PNG" alt="Barecce">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/brand-text-white.PNG" alt="Barecce">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact" class="btn-contact">Get in Touch</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            Large Background Text
+            <div class="hero-bg-text">
+                <span class="bg-text-line">BARECCE</span>
+                <span class="bg-text-line">BARECCE</span>
+                <span class="bg-text-line">BARECCE</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-label">Social Media Agency</div>
+                    <h1 class="hero-title">
+                        <span class="line">Strategy, Design,</span>
+                        <span class="line hero-highlight">Performance</span>
+                    </h1>
+                    <p class="hero-subtitle">We are a social media agency that helps businesses grow their digital
+                        presence through creative storytelling and data-driven strategies.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Our Work</a>
+                        <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card card-1">
+                        <img src="images/asset2.jpeg" alt="Creative">
+                    </div>
+                    <div class="floating-card card-2">
+                        <img src="images/asset7.jpeg" alt="Creative">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Statement Section -->
+    <section class="brand-statement">
+        <div class="container">
+            <div class="statement-content">
+                <div class="statement-icon">!</div>
+                <p class="statement-text">Be the brand they never stop talking about</p>
+            </div>
+            <div class="statement-description">
+                <p>Social media isn't static anymore. Today's brands need energy, personality and meaning. We bring
+                    together strategy, design and storytelling to build digital experiences that grab attention, move
+                    fast and make people feel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Showcase -->
+    <section class="brand-showcase">
+        <div class="container">
+            <h2 class="showcase-title">Creating Iconic<br>Brands Daily.</h2>
+            <p class="showcase-subtitle">Your brand has a story. We make sure it's seen, felt and remembered. We create
+                content, build brands and create moments that turn attention into action.</p>
+            <a href="#about" class="btn btn-primary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What We Do</span>
+                <h2 class="section-title">Services We Provide</h2>
+                <div class="services-summary">
+                    <span class="summary-label">[07] Summary:</span>
+                    <ul class="summary-list">
+                        <li>Social Strategy</li>
+                        <li>Content Production</li>
+                        <li>Performance Ads</li>
+                        <li>Influencer Marketing</li>
+                        <li>Branding</li>
+                        <li>Digital Marketing</li>
+                        <li>Website Development</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="services-grid-enhanced">
+                <div class="service-card-enhanced">
+                    <div class="service-icon-new">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Social Strategy</h3>
+                    <p>A brand is more than presence. We help you show up the same way everywhere - Online, offline and
+                        everything between with data-driven social strategies.</p>
+                </div>
+                <div class="service-card-enhanced">
+                    <div class="service-icon-new">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Content Production</h3>
+                    <p>Good content tells a story before anyone reads a word. We create content that stands out, feels
+                        great and connects with your audience.</p>
+                </div>
+                <div class="service-card-enhanced">
+                    <div class="service-icon-new">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Performance Ads</h3>
+                    <p>We run ads that deliver results. Data-driven campaigns designed to maximize ROI and drive real
+                        business growth across all platforms.</p>
+                </div>
+                <div class="service-card-enhanced">
+                    <div class="service-icon-new">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Influencer Marketing</h3>
+                    <p>Connect with audiences through authentic voices. We match your brand with influencers who truly
+                        resonate and drive engagement.</p>
+                </div>
+                <div class="service-card-enhanced">
+                    <div class="service-icon-new">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Branding</h3>
+                    <p>We create brand identities that feel right. Not just good-looking but meaningful, memorable and
+                        built to last for your brand.</p>
+                </div>
+                <div class="service-card-enhanced">
+                    <div class="service-icon-new">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Comprehensive digital marketing solutions including SEO, email campaigns, and multi-channel
+                        strategies that drive measurable results.</p>
+                </div>
+                <div class="service-card-enhanced">
+                    <div class="service-icon-new">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Your website should work hard and look good. We design and develop sites that are easy to use and
+                        built to grow with you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">These are not just projects, they are stories of our clients, our work, and
+                    the impact we made.</p>
+            </div>
+            <div class="projects-grid-new">
+                <div class="project-card-new">
+                    <div class="project-image-wrapper">
+                        <img src="images/asset1.jpeg" alt="Project 1">
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-year">2024</span>
+                        <span class="project-category">Food & Beverage</span>
+                        <span class="project-service">Brand and Content</span>
+                    </div>
+                    <h3 class="project-title-new">
+                        <span>What We Eat & Repeat</span>
+                        <span>What We Eat & Repeat</span>
+                        <span>What We Eat & Repeat</span>
+                        <span>What We Eat & Repeat</span>
+                    </h3>
+                </div>
+                <div class="project-card-new">
+                    <div class="project-image-wrapper">
+                        <img src="images/asset2.jpeg" alt="Project 2">
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-year">2024</span>
+                        <span class="project-category">Consumer Goods</span>
+                        <span class="project-service">Packaging Design</span>
+                    </div>
+                    <h3 class="project-title-new">
+                        <span>Brand Packaging</span>
+                        <span>Brand Packaging</span>
+                        <span>Brand Packaging</span>
+                        <span>Brand Packaging</span>
+                    </h3>
+                </div>
+                <div class="project-card-new">
+                    <div class="project-image-wrapper">
+                        <img src="images/asset3.jpeg" alt="Project 3">
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-year">2024</span>
+                        <span class="project-category">Beauty & Wellness</span>
+                        <span class="project-service">Product Launch</span>
+                    </div>
+                    <h3 class="project-title-new">
+                        <span>Almost Bare</span>
+                        <span>Almost Bare</span>
+                        <span>Almost Bare</span>
+                        <span>Almost Bare</span>
+                    </h3>
+                </div>
+                <div class="project-card-new">
+                    <div class="project-image-wrapper">
+                        <img src="images/asset4.jpeg" alt="Project 4">
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-year">2024</span>
+                        <span class="project-category">Social Media</span>
+                        <span class="project-service">Visual Identity</span>
+                    </div>
+                    <h3 class="project-title-new">
+                        <span>Creative Branding</span>
+                        <span>Creative Branding</span>
+                        <span>Creative Branding</span>
+                        <span>Creative Branding</span>
+                    </h3>
+                </div>
+                <div class="project-card-new">
+                    <div class="project-image-wrapper">
+                        <img src="images/asset5.jpeg" alt="Project 5">
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-year">2025</span>
+                        <span class="project-category">Lifestyle</span>
+                        <span class="project-service">Content Strategy</span>
+                    </div>
+                    <h3 class="project-title-new">
+                        <span>Social Campaign</span>
+                        <span>Social Campaign</span>
+                        <span>Social Campaign</span>
+                        <span>Social Campaign</span>
+                    </h3>
+                </div>
+                <div class="project-card-new">
+                    <div class="project-image-wrapper">
+                        <img src="images/asset6.jpeg" alt="Project 6">
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-year">2025</span>
+                        <span class="project-category">Digital Marketing</span>
+                        <span class="project-service">Performance Ads</span>
+                    </div>
+                    <h3 class="project-title-new">
+                        <span>Scroll Sense</span>
+                        <span>Scroll Sense</span>
+                        <span>Scroll Sense</span>
+                        <span>Scroll Sense</span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-image">
+                    <img src="images/asset7.jpeg" alt="About Barecce">
+                    <div class="about-shape"></div>
+                </div>
+                <div class="about-content">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">Who We Are</h2>
+                    <p class="about-text">
+                        Barecce is a creative social media agency dedicated to transforming brands through innovative
+                        digital strategies. We believe in the power of authentic storytelling and data-driven creativity
+                        to build meaningful connections between brands and their audiences.
+                    </p>
+                    <p class="about-text">
+                        Our team of passionate creatives, strategists, and developers work together to craft experiences
+                        that don't just look good—they drive real results. From concept to execution, we're with you
+                        every step of the way.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-target="150">0</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-target="50">0</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-target="5">0</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Partners</span>
+                <h2 class="section-title">Our Clients</h2>
+                <p class="section-subtitle">Trusted by leading brands worldwide</p>
+            </div>
+            <div class="clients-marquee">
+                <div class="marquee-content">
+                    <div class="client-logo">Brand 1</div>
+                    <div class="client-logo">Brand 2</div>
+                    <div class="client-logo">Brand 3</div>
+                    <div class="client-logo">Brand 4</div>
+                    <div class="client-logo">Brand 5</div>
+                    <div class="client-logo">Brand 6</div>
+                    <div class="client-logo">Brand 1</div>
+                    <div class="client-logo">Brand 2</div>
+                    <div class="client-logo">Brand 3</div>
+                    <div class="client-logo">Brand 4</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Reviews</span>
+                <h2 class="section-title">What Clients Say</h2>
+                <p class="section-subtitle">Hear from our satisfied clients</p>
+            </div>
+            <div class="swiper testimonials-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Barecce transformed our social media presence completely. Their
+                                creative approach and strategic thinking helped us connect with our audience in ways we
+                                never imagined."</p>
+                            <div class="testimonial-author">
+                                <h4>Sarah Johnson</h4>
+                                <p>Marketing Director, TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Working with Barecce has been an absolute pleasure. Their team
+                                is professional, creative, and always goes above and beyond to deliver exceptional
+                                results."</p>
+                            <div class="testimonial-author">
+                                <h4>Michael Chen</h4>
+                                <p>CEO, StartupHub</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"The ROI we've seen from our campaigns with Barecce has exceeded
+                                all expectations. They truly understand how to create content that converts."</p>
+                            <div class="testimonial-author">
+                                <h4>Emily Rodriguez</h4>
+                                <p>Brand Manager, FashionForward</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <p class="cta-pre">So, are you ready to Stand out?</p>
+                <h2 class="cta-title">Design it once.<br>Design it right</h2>
+                <a href="#contact" class="btn btn-primary btn-large">Let's Talk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-label">Let's Talk</span>
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="contact-text">Ready to elevate your brand? Let's create something amazing together.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                        data-cfemail="375f525b5b5877555645525454521954585a">[email&#160;protected]</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>123 Creative Street, Design City</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/brand-text-white.PNG" alt="Barecce">
+                    <p>Creating digital experiences that matter</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#about">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Branding</a></li>
+                            <li><a href="#services">Web Development</a></li>
+                            <li><a href="#services">Social Strategy</a></li>
+                            <li><a href="#services">Content Production</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Barecce. All rights reserved.</p>
+                <p>Design & Developed By <a href="#" target="_blank">Dynamic Labz</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Go To Top Button -->
+    <button class="go-to-top" id="goToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

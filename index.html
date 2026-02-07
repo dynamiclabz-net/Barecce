@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barecce - Social Media Agency</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+
+    <div class="noise-overlay"></div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <nav class="navbar">
+        <div class="logo-wrap" data-magnetic>
+            <a href="#home" class="brand-logo">Barecce</a>
+        </div>
+        <div class="menu-toggle" data-magnetic>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="menu-overlay">
+        <div class="menu-nav">
+            <a href="#home" class="menu-link">Home</a>
+            <a href="#work" class="menu-link">Work</a>
+            <a href="#services" class="menu-link">Services</a>
+            <a href="#contact" class="menu-link">Contact</a>
+        </div>
+    </div>
+
+    <main id="main-content">
+        
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1 class="hero-title reveal-text">
+                        Strategy,&nbsp;Design<br>
+                        <span class="text-outline">&amp;&nbsp;Perspectives.</span>
+                    </h1>
+                </div>
+                <div class="hero-visual">
+                    <img src="images/asset2.jpeg" alt="Barecce Hero" class="hero-img">
+                </div>
+            </div>
+            <div class="hero-footer container">
+                <p class="hero-sub reveal-text">We build digital experiences that grab attention, move fast, and make people feel.</p>
+                <div class="scroll-icon">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <div class="marquee-container">
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <span>Social Strategy</span> <i class="fas fa-star"></i>
+                    <span>Content Production</span> <i class="fas fa-star"></i>
+                    <span>Performance Ads</span> <i class="fas fa-star"></i>
+                    <span>Branding</span> <i class="fas fa-star"></i>
+                    <span>Digital Marketing</span> <i class="fas fa-star"></i>
+                    <span>Social Strategy</span> <i class="fas fa-star"></i>
+                    <span>Content Production</span> <i class="fas fa-star"></i>
+                    <span>Performance Ads</span> <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <section id="about" class="intro-section">
+            <div class="container intro-grid">
+                <div class="intro-visual" data-magnetic>
+                    <img src="images/asset1.jpeg" alt="Illustration">
+                </div>
+                <div class="intro-content">
+                    <span class="label">[ Who We Are ]</span>
+                    <p class="intro-text reveal-text">
+                        Be the brand they <span class="highlight">never&nbsp;stop</span> talking about. 
+                        Social media isn't static. It's about energy. We bring together strategy and storytelling.
+                    </p>
+                    <a href="#contact" class="btn-pill" data-magnetic>Let's Talk</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="work-section">
+            <div class="work-sticky-wrapper">
+                <div class="container work-header">
+                    <span class="label">[ Selected Work ]</span>
+                    <h2>Our Portfolio</h2>
+                </div>
+                <div class="horizontal-track">
+                    
+                    <div class="work-card">
+                        <div class="work-img">
+                            <img src="images/asset2.jpeg" alt="Packaging">
+                        </div>
+                        <div class="work-info">
+                            <h3>Brand Packaging</h3>
+                            <p>Consumer Goods</p>
+                        </div>
+                    </div>
+
+                    <div class="work-card">
+                        <div class="work-img">
+                            <img src="images/asset4.jpeg" alt="Eyewear">
+                        </div>
+                        <div class="work-info">
+                            <h3>Almost Bare</h3>
+                            <p>Product Launch</p>
+                        </div>
+                    </div>
+
+                    <div class="work-card">
+                        <div class="work-img">
+                            <img src="images/asset3.jpeg" alt="Campaign">
+                        </div>
+                        <div class="work-info">
+                            <h3>Eat & Repeat</h3>
+                            <p>Food & Beverage</p>
+                        </div>
+                    </div>
+
+                    <div class="work-card">
+                        <div class="work-img">
+                            <img src="images/asset1.jpeg" alt="Print">
+                        </div>
+                        <div class="work-info">
+                            <h3>Editorial</h3>
+                            <p>Print Media</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="services-header">
+                    <span class="label">[ What We Do ]</span>
+                    <h2>Services</h2>
+                </div>
+                
+                <div class="cards-stack">
+                    <div class="service-card cream-card">
+                        <span class="svc-num">01</span>
+                        <h3>Social Strategy</h3>
+                        <p>We help you show up the same way everywhere with data-driven social strategies.</p>
+                        <img src="images/1 (8).png" class="svc-icon" alt="Icon">
+                    </div>
+
+                    <div class="service-card orange-card">
+                        <span class="svc-num">02</span>
+                        <h3>Content Production</h3>
+                        <p>Good content tells a story. We create visuals that stand out and stop the scroll.</p>
+                    </div>
+
+                    <div class="service-card dark-card">
+                        <span class="svc-num">03</span>
+                        <h3>Performance Ads</h3>
+                        <p>Data-driven campaigns designed to maximize ROI and drive real business growth.</p>
+                    </div>
+
+                    <div class="service-card cream-card">
+                        <span class="svc-num">04</span>
+                        <h3>Influencer Marketing</h3>
+                        <p>Connect with audiences through authentic voices that resonate and drive engagement.</p>
+                    </div>
+
+                    <div class="service-card orange-card">
+                        <span class="svc-num">05</span>
+                        <h3>Branding</h3>
+                        <p>We create brand identities that feel right. Meaningful, memorable, and built to last.</p>
+                    </div>
+
+                    <div class="service-card dark-card">
+                        <span class="svc-num">06</span>
+                        <h3>Digital Marketing</h3>
+                        <p>Comprehensive solutions including SEO and multi-channel strategies.</p>
+                    </div>
+
+                    <div class="service-card cream-card">
+                        <span class="svc-num">07</span>
+                        <h3>Website Development</h3>
+                        <p>We design sites that are easy to use and built to grow with your business.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-left">
+                        <h2>Let's build<br>something<br><span class="highlight">Iconic.</span></h2>
+                    </div>
+                    <div class="contact-right">
+                        <form class="simple-form">
+                            <input type="text" placeholder="Your Name">
+                            <input type="email" placeholder="Email Address">
+                            <textarea placeholder="Tell us about your project"></textarea>
+                            <button type="button" class="btn-pill">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact-footer" class="footer-reveal">
+        <div class="footer-content">
+            <p class="cta-pre">Don't be shy.</p>
+            <a href="mailto:hello@barecce.com" class="footer-email" data-magnetic>hello@barecce.com</a>
+            
+            <div class="footer-meta">
+                <div class="footer-col">
+                    <h4>Address</h4>
+                    <p>123 Creative St,<br>Design City, DC</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Socials</h4>
+                    <a href="#">Instagram</a><br>
+                    <a href="#">LinkedIn</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Barecce &copy; 2024</h4>
+                    <p>Designed by Dynamic Labz</p>
+                </div>
+            </div>
+        </div>
+        <img src="images/asset5.jpeg" class="footer-mascot" alt="Footer Cat">
+    </footer>
+
+    <div class="progress-wrap" id="scrollBtn" data-magnetic>
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+        </svg>
+        <div class="arrow-icon">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

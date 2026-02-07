@@ -1,0 +1,845 @@
+/* ========================
+   1. FONTS & VARS
+   ======================== */
+@font-face {
+    font-family: 'Yaro';
+    src: url('fonts/YaroRg.woff2') format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Quity';
+    src: url('fonts/quity.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --cream: #efecce;
+    --brown: #423c3b;
+    --orange: #f68823;
+    --font-head: 'Yaro', sans-serif;
+    --font-logo: 'Quity', serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+/* GLOBAL FIX: Force words to stay whole */
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--brown);
+    color: var(--cream);
+    font-family: var(--font-body);
+    cursor: none;
+    word-break: normal !important;
+    overflow-wrap: break-word;
+    hyphens: none;
+}
+
+/* ========================
+   2. PRELOADER & CURSOR
+   ======================== */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--cream);
+    z-index: 9999;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 2rem 4rem;
+}
+
+.counter {
+    font-family: var(--font-head);
+    font-size: 12rem;
+    color: var(--orange);
+    line-height: 0.8;
+}
+
+.noise-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 8000;
+    opacity: 0.05;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--orange);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.cursor-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--cream);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transition: width 0.3s, height 0.3s, background 0.3s;
+}
+
+body.hovered .cursor-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(246, 136, 35, 0.2);
+    border-color: var(--orange);
+}
+
+/* ========================
+   3. NAVIGATION
+   ======================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    mix-blend-mode: difference;
+}
+
+.brand-logo {
+    font-family: var(--font-logo);
+    font-size: 2.5rem;
+    color: var(--cream);
+    text-decoration: none;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--cream);
+    margin-bottom: 6px;
+    transition: 0.3s;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--orange);
+    z-index: 90;
+    transform: translateY(-100%);
+    transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-overlay.active {
+    transform: translateY(0);
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+}
+
+.menu-link {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    color: var(--brown);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-link:hover {
+    color: var(--cream);
+    font-style: italic;
+}
+
+/* ========================
+   4. HERO
+   ======================== */
+.hero-section {
+    position: relative;
+    padding: 160px 5% 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* FIX: Prevent text from hitting image and reduce max size slightly */
+.hero-text {
+    max-width: 60%;
+}
+
+.hero-title {
+    font-family: var(--font-head);
+    font-size: clamp(3rem, 6.5vw, 7.5rem);
+    line-height: 1.1;
+    z-index: 2;
+    word-break: normal;
+}
+
+.text-outline {
+    -webkit-text-stroke: 1px var(--cream);
+    color: transparent;
+}
+
+.hero-visual {
+    width: 40%;
+    height: 50vh;
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transform: rotate(5deg);
+    /* border: 2px solid var(--cream); */
+}
+
+/* FIX: Increased padding to add space above this section */
+.hero-footer {
+    border-top: 1px solid rgba(239, 236, 206, 0.2);
+    padding-top: 4rem;
+    /* Increased padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 2rem !important;
+}
+
+.hero-sub {
+    max-width: 400px;
+    opacity: 0.8;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* ========================
+   5. MARQUEE
+   ======================== */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 3rem 0;
+}
+
+.marquee-wrapper {
+    background: var(--cream);
+    color: var(--brown);
+    padding: 1.5rem 0;
+    transform: rotate(-2deg) scale(1.05);
+    white-space: nowrap;
+    width: 110%;
+    margin-left: -5%;
+}
+
+.marquee-track {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+    font-family: var(--font-head);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.marquee-track i {
+    font-size: 1rem;
+    color: var(--orange);
+    margin: 0 1.5rem;
+    vertical-align: middle;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ========================
+   6. INTRO
+   ======================== */
+.intro-section {
+    padding: 8rem 0;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.intro-visual img {
+    width: 300px;
+    border-radius: 50%;
+    /* animation: spin 12s linear infinite; */
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.label {
+    display: block;
+    color: var(--orange);
+    font-family: var(--font-body);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.intro-text {
+    font-family: var(--font-head);
+    font-size: 2.5rem;
+    line-height: 1.3;
+    margin-bottom: 3rem;
+    word-break: normal;
+}
+
+.highlight {
+    color: var(--orange);
+    font-style: italic;
+}
+
+.btn-pill {
+    padding: 1rem 3rem;
+    border: 1px solid var(--cream);
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--cream);
+    text-transform: uppercase;
+    transition: 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+}
+
+.btn-pill:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: var(--brown);
+}
+
+/* ========================
+   7. HORIZONTAL WORK
+   ======================== */
+.work-section {
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+.work-sticky-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.work-header {
+    padding-left: 5%;
+    margin-bottom: 3rem;
+}
+
+.work-header h2 {
+    font-family: var(--font-head);
+    font-size: 4rem;
+}
+
+.horizontal-track {
+    display: flex;
+    gap: 4rem;
+    padding-left: 5%;
+    width: max-content;
+}
+
+.work-card {
+    width: 24vw;
+    max-width: 600px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.work-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background: transparent;
+}
+
+.work-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s;
+}
+
+.work-card:hover .work-img img {
+    transform: scale(1.05);
+}
+
+.work-info h3 {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.work-info p {
+    opacity: 0.7;
+}
+
+/* ========================
+   8. STACKING SERVICES
+   ======================== */
+.services-section {
+    padding: 8rem 0;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.services-header h2 {
+    font-family: var(--font-head);
+    font-size: 4rem;
+}
+
+.cards-stack {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 10vh;
+    padding-inline: 5%;
+}
+
+.service-card {
+    padding: 4rem;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.cream-card {
+    background: var(--cream);
+    color: var(--brown);
+}
+
+.orange-card {
+    background: var(--orange);
+    color: var(--cream);
+}
+
+.dark-card {
+    background: #221e1d;
+    color: var(--cream);
+    border: 1px solid var(--orange);
+}
+
+.svc-num {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    opacity: 0.3;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.service-card h3 {
+    font-family: var(--font-head);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1.2rem;
+    max-width: 70%;
+    line-height: 1.6;
+}
+
+.svc-icon {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 120px;
+    mix-blend-mode: multiply;
+}
+
+/* ========================
+   9. CONTACT FORM
+   ======================== */
+.contact-section {
+    padding: 8rem 0;
+    background: var(--brown);
+    position: relative;
+    z-index: 2;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-left h2 {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+.simple-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.simple-form input,
+.simple-form textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--cream);
+    padding: 1rem 0;
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.simple-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.simple-form input:focus,
+.simple-form textarea:focus {
+    border-color: var(--orange);
+}
+
+/* ========================
+   10. FOOTER REVEAL
+   ======================== */
+main {
+    position: relative;
+    z-index: 2;
+    background: var(--brown);
+    margin-bottom: 80vh;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 1);
+}
+
+.footer-reveal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: var(--cream);
+    color: var(--brown);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.footer-content {
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.cta-pre {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-body);
+}
+
+.footer-email {
+    font-family: var(--font-head);
+    font-size: clamp(3rem, 7vw, 6rem);
+    color: var(--brown);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4rem;
+    transition: 0.3s;
+}
+
+.footer-email:hover {
+    color: var(--orange);
+}
+
+.footer-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    border-top: 1px solid rgba(66, 60, 59, 0.1);
+    padding-top: 3rem;
+    text-align: left;
+}
+
+.footer-col h4 {
+    font-family: var(--font-head);
+    margin-bottom: 1rem;
+}
+
+.footer-col p,
+.footer-col a {
+    color: var(--brown);
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-mascot {
+    position: absolute;
+    bottom: -50px;
+    right: -20px;
+    width: 250px;
+    transform: rotate(-10deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+        white-space: normal;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hero-visual {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .horizontal-track {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .work-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .work-sticky-wrapper {
+        height: auto;
+        display: block;
+    }
+
+    .footer-reveal {
+        position: relative;
+        height: auto;
+        padding: 4rem 0;
+    }
+
+    main {
+        margin-bottom: 0;
+    }
+
+    .service-card {
+        min-height: 300px;
+        padding: 2rem;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-meta {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================
+   MAGNETIC PROGRESS BUTTON (FIXED)
+   ========================================== */
+.progress-wrap {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 2px rgba(239, 236, 206, 0.1); 
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 200ms linear;
+    background-color: var(--brown); /* FIXED: Was var(--secondary-color) */
+}
+
+.progress-wrap.active-progress {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.progress-wrap::after {
+    position: absolute;
+    font-family: 'Font Awesome 6 Free';
+    content: ''; 
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    color: var(--cream);
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    transition: all 200ms linear;
+}
+
+.arrow-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cream);
+    font-size: 1.2rem;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.progress-wrap:hover .arrow-icon {
+    transform: translate(-50%, -60%);
+}
+
+.progress-circle path {
+    fill: none;
+    stroke: var(--orange); /* FIXED: Was var(--primary-color) */
+    stroke-width: 4;
+    box-sizing: border-box;
+    transition: all 200ms linear;
+}
+
+/* Hover Glow Effect */
+.progress-wrap:hover {
+    box-shadow: 0 0 20px rgba(246, 136, 35, 0.4);
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .progress-wrap {
+        right: 20px;
+        bottom: 20px;
+        height: 50px;
+        width: 50px;
+    }
+    .arrow-icon {
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================
+   FOOTER COLOR FIX (Go-To-Top)
+   ========================================== */
+/* When the class 'on-footer' is added via JS */
+.progress-wrap.on-footer path {
+    stroke: var(--cream) !important; /* Change ring from Orange to Cream */
+}
+
+.progress-wrap.on-footer {
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2); /* Make border slightly brighter */
+}
+
+.progress-wrap.on-footer .arrow-icon {
+    color: var(--cream); /* Ensure arrow stays cream */
+}
+
+/* ========================
+   CUSTOM TEXT SELECTION
+   ======================== */
+::selection {
+    background-color: var(--orange); /* Brand Orange Background */
+    color: var(--brown);             /* Brand Brown Text */
+}
+
+/* For Firefox Support */
+::-moz-selection {
+    background-color: var(--orange);
+    color: var(--brown);
+}
