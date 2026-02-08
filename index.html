@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barecce - Social Media Agency</title>
+    <link rel="icon" type="image/png" href="images/brand-logo-orange.PNG">
     
     <link rel="stylesheet" href="style.css">
 
@@ -12,6 +13,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
@@ -21,12 +24,22 @@
 
     <div class="noise-overlay"></div>
 
-    <div class="cursor-dot"></div>
-    <div class="cursor-circle"></div>
+    <!-- Custom Cursor -->
 
+    <!-- <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div> -->
+
+    <div class="brand-cursor">
+        <img src="images/brand-logo-white.PNG" class="cursor-img c-default" alt="Cursor">
+        <img src="images/brand-logo-orange.PNG" class="cursor-img c-active" alt="Cursor Active">
+    </div>
+
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="logo-wrap" data-magnetic>
-            <a href="#home" class="brand-logo">Barecce</a>
+            <a href="#home">
+                <img src="images/brand-text-white.PNG" alt="Barecce" class="nav-logo-img">
+            </a>
         </div>
         <div class="menu-toggle" data-magnetic>
             <div class="hamburger">
@@ -46,8 +59,14 @@
     </div>
 
     <main id="main-content">
+
+        <section id="mega-hero" class="mega-hero-section" data-scroll-section>
+            <div class="mega-text-container">
+                <img src="images/brand-text-orange.PNG" alt="BARECCE" class="mega-brand-img">
+            </div>
+        </section>
         
-        <section id="home" class="hero-section">
+        <!-- <section id="home" class="hero-section">
             <div class="container hero-container">
                 <div class="hero-text">
                     <h1 class="hero-title reveal-text">
@@ -64,6 +83,43 @@
                 <div class="scroll-icon">
                     <i class="fas fa-arrow-down"></i>
                 </div>
+            </div>
+        </section> -->
+
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1 class="hero-title reveal-text">
+                        <span class="row-1">Strategy,</span><br>
+                        <span class="row-2 text-outline">Design</span><br>
+                        <span class="row-3">& Perspectives.</span>
+                    </h1>
+                </div>
+                
+                <div class="hero-visual tilt-card" data-tilt>
+                    <div class="tilt-inner">
+                        <img src="images/asset2.jpeg" alt="Barecce Hero" class="hero-img">
+                        
+                        <div class="hero-badge">
+                            <svg viewBox="0 0 100 100" width="100" height="100">
+                                <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
+                                <text>
+                                    <textPath xlink:href="#circlePath" fill="currentColor">
+                                        BARECCE AGENCY • EST 2024 •
+                                    </textPath>
+                                </text>
+                            </svg>
+                            <div class="badge-arrow">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-footer container">
+                <p class="hero-sub reveal-text">We build digital experiences that grab attention, move fast, and make people feel.</p>
+                <!-- <div class="scroll-line"></div>  -->
             </div>
         </section>
 
@@ -94,6 +150,41 @@
                         Social media isn't static. It's about energy. We bring together strategy and storytelling.
                     </p>
                     <a href="#contact" class="btn-pill" data-magnetic>Let's Talk</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="agency-about-section">
+            <div class="container about-detail-grid">
+                <div class="about-visual">
+                    <div class="img-frame">
+                        <img src="images/asset3.jpeg" alt="Barecce Team" class="about-img parallax-img">
+                    </div>
+                </div>
+                <div class="about-info">
+                    <span class="label">[ The Agency ]</span>
+                    <h2 class="about-title reveal-text">
+                        We don't just post.<br>
+                        We <span class="highlight">propel.</span>
+                    </h2>
+                    <p class="about-desc">
+                        Barecce isn't your typical agency. We are a collective of strategists, creators, and data-nerds obsessed with ROI. While others chase fleeting trends, we build sustainable digital ecosystems that turn followers into loyal customers.
+                    </p>
+                    
+                    <div class="stats-wrapper">
+                        <div class="stat-box">
+                            <span class="stat-num">3+</span>
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num">50+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Commitment</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -162,45 +253,50 @@
                         <span class="svc-num">01</span>
                         <h3>Social Strategy</h3>
                         <p>We help you show up the same way everywhere with data-driven social strategies.</p>
-                        <img src="images/1 (8).png" class="svc-icon" alt="Icon">
+                        <img src="images/1 (8).png" class="svc-icon" alt="Social Strategy Icon">
                     </div>
-
+                
                     <div class="service-card orange-card">
                         <span class="svc-num">02</span>
                         <h3>Content Production</h3>
                         <p>Good content tells a story. We create visuals that stand out and stop the scroll.</p>
+                        <img src="images/service-2.png" class="svc-icon" alt="Content Icon">
                     </div>
-
+                
                     <div class="service-card dark-card">
                         <span class="svc-num">03</span>
                         <h3>Performance Ads</h3>
                         <p>Data-driven campaigns designed to maximize ROI and drive real business growth.</p>
+                        <img src="images/service-3.png" class="svc-icon" alt="Ads Icon">
                     </div>
-
+                
                     <div class="service-card cream-card">
                         <span class="svc-num">04</span>
                         <h3>Influencer Marketing</h3>
                         <p>Connect with audiences through authentic voices that resonate and drive engagement.</p>
+                        <img src="images/service-4.png" class="svc-icon" alt="Influencer Icon">
                     </div>
-
+                
                     <div class="service-card orange-card">
                         <span class="svc-num">05</span>
                         <h3>Branding</h3>
                         <p>We create brand identities that feel right. Meaningful, memorable, and built to last.</p>
+                        <img src="images/service-5.png" class="svc-icon" alt="Branding Icon">
                     </div>
-
+                
                     <div class="service-card dark-card">
                         <span class="svc-num">06</span>
                         <h3>Digital Marketing</h3>
                         <p>Comprehensive solutions including SEO and multi-channel strategies.</p>
+                        <img src="images/service-6.png" class="svc-icon" alt="Marketing Icon">
                     </div>
-
+                
                     <div class="service-card cream-card">
                         <span class="svc-num">07</span>
                         <h3>Website Development</h3>
                         <p>We design sites that are easy to use and built to grow with your business.</p>
+                        <img src="images/service-7.png" class="svc-icon" alt="Web Dev Icon">
                     </div>
-
                 </div>
             </div>
         </section>
@@ -241,7 +337,7 @@
                     <a href="#">LinkedIn</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Barecce &copy; 2024</h4>
+                    <h4>Barecce&copy; 2026</h4>
                     <p>Designed by Dynamic Labz</p>
                 </div>
             </div>
@@ -249,12 +345,20 @@
         <img src="images/asset5.jpeg" class="footer-mascot" alt="Footer Cat">
     </footer>
 
+    <!-- GoToTop Button -->
     <div class="progress-wrap" id="scrollBtn" data-magnetic>
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
         </svg>
         <div class="arrow-icon">
             <i class="fas fa-arrow-up"></i>
+        </div>
+    </div>
+
+    <!-- Theme Switching Button -->
+    <div class="theme-toggle-wrap" id="themeBtn" data-magnetic>
+        <div class="theme-icon">
+            <i class="fas fa-sun"></i>
         </div>
     </div>
 
