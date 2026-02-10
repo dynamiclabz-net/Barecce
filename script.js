@@ -132,21 +132,47 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // E. Mega Hero Reveal
-        gsap.fromTo(".mega-brand-img",
-            { scale: 0.8, opacity: 0 },
-            { scale: 1, opacity: 1, duration: 1.5, ease: "power4.out", delay: 0.5 }
-        );
+        // gsap.fromTo(".mega-brand-img",
+        //     { scale: 0.8, opacity: 0 },
+        //     { scale: 1, opacity: 1, duration: 1.5, ease: "power4.out", delay: 0.5 }
+        // );
 
-        gsap.to(".mega-brand-img", {
-            yPercent: 20,
-            ease: "none",
-            scrollTrigger: {
-                trigger: "#mega-hero",
-                start: "top top",
-                end: "bottom top",
-                scrub: true
-            }
-        });
+        // gsap.to(".mega-brand-img", {
+        //     yPercent: 20,
+        //     ease: "none",
+        //     scrollTrigger: {
+        //         trigger: "#mega-hero",
+        //         start: "top top",
+        //         end: "bottom top",
+        //         scrub: true
+        //     }
+        // });
+
+        // E. Mega Hero Reveal (VIDEO UPDATE)
+        const heroVideo = document.querySelector(".mega-brand-video");
+        
+        if (heroVideo) {
+            // 1. Start Playing the video immediately when animations init
+            heroVideo.play().catch(e => console.log("Video autoplay failed:", e));
+
+            // 2. Animate it fading in and scaling up
+            gsap.fromTo(heroVideo, 
+                { scale: 0.8, opacity: 0 },
+                { scale: 1, opacity: 1, duration: 1.5, ease: "power4.out", delay: 0.5 }
+            );
+            
+            // 3. Parallax Scroll Effect (Moves down as you scroll)
+            gsap.to(heroVideo, {
+                yPercent: 20, 
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "#mega-hero",
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+        }
 
         // F. Agency About - Fade In
         gsap.from(".img-frame", {
