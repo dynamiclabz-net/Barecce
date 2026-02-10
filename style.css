@@ -98,7 +98,7 @@ body {
 }
 
 /* ========================
-   2. PRELOADER & BRAND CURSOR
+   2. PRELOADER (Hindi Sequence)
    ======================== */
 .preloader {
     position: fixed;
@@ -109,18 +109,47 @@ body {
     background: var(--cream);
     z-index: 9999;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 2rem 4rem;
+    /* CHANGED: Centered looks better for a Logo Reveal than bottom-right */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
-.counter {
-    font-family: var(--font-head);
-    font-size: 12rem;
+.loader-content {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* The Hindi Character Style */
+.loader-text {
+    font-family: var(--font-head); /* Yaro Font */
+    /* Responsive Giant Text: Min 6rem, Pref 15vw, Max 18rem */
+    font-size: clamp(6rem, 15vw, 18rem);
     color: var(--orange);
-    line-height: 0.8;
+    line-height: 1;
+    margin: 0;
+    display: block; /* Visible by default */
 }
 
+/* The Final Logo Style */
+.loader-logo {
+    display: none; /* Hidden by default */
+    width: 250px;  /* Desktop Size */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .loader-logo {
+        width: 180px; /* Smaller on Mobile */
+    }
+}
+
+/* ========================
+   2. Noise-overlay & BRAND CURSOR
+   ======================== */
 .noise-overlay {
     position: fixed;
     inset: 0;
@@ -243,13 +272,31 @@ body.footer-cursor-mode .c-active {
     mix-blend-mode: difference;
 }
 
-.nav-logo-img {
+/* .nav-logo-img {
     height: 35px;
     width: 150px;
     object-fit: contain;
     display: block;
     mix-blend-mode: lighten;
+} */
+
+/* ========================
+   NAVBAR LOGO UPDATE (Hindi Text)
+   ======================== */
+.nav-logo-text {
+    font-family: var(--font-body); /* Poppins supports Hindi */
+    font-weight: 700;              /* Bold weight for logo feel */
+    font-size: 2rem;             /* Adjust size to match previous image height */
+    color: var(--cream);           /* Matches the theme color */
+    line-height: 1;
+    display: block;
+    letter-spacing: 1px;
 }
+
+/* NOTE: We do NOT need the Light Mode "Filter" logic anymore.
+   Since we are using CSS variables (var(--cream)), the color will 
+   automatically swap to Brown when Light Mode is active.
+*/
 
 /* FIX: Navbar Colors when Menu is Open */
 .navbar.nav-open {
@@ -383,8 +430,9 @@ body.footer-cursor-mode .c-active {
 /* --- TYPOGRAPHY --- */
 .hero-title {
     font-family: var(--font-head);
-    font-size: clamp(4rem, 9.5vw, 11rem);
-    line-height: 0.85;
+    /* Reduced scaling (9.5vw -> 7vw) to fit the longer sentence */
+    font-size: clamp(3rem, 7vw, 5.5rem); 
+    line-height: 1.1; /* Slight increase for readability */
     z-index: 1;
     position: relative;
     white-space: nowrap;
@@ -414,7 +462,7 @@ body.footer-cursor-mode .c-active {
     display: block;
     color: var(--orange);
     font-style: italic;
-    font-size: 0.6em;
+    font-size: 1em;
     margin-left: 2vw;
 }
 
@@ -450,8 +498,8 @@ body.footer-cursor-mode .c-active {
     position: absolute;
     bottom: -40px;
     left: -40px;
-    width: 140px;
-    height: 140px;
+    width: 110px;
+    height: 110px;
     background: var(--brown);
     border-radius: 50%;
     display: flex;
@@ -477,10 +525,61 @@ body.footer-cursor-mode .c-active {
     text-transform: uppercase;
 }
 
-.badge-arrow {
+/* .badge-arrow {
     position: absolute;
     font-size: 1.5rem;
     color: var(--cream);
+} */
+
+
+/* ========================
+   UPDATED BADGE CENTER IMAGE (Theme Swap Fix)
+   ======================== */
+
+.badge-center-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: 35px;
+    z-index: 2;
+}
+
+.badge-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* --- DEFAULT (Dark Mode) --- */
+.b-white {
+    opacity: 1; /* Show White 'B' */
+}
+
+.b-orange {
+    opacity: 0; /* Hide Orange 'B' */
+}
+
+/* --- LIGHT MODE (Theme Swap) --- */
+[data-theme="light"] .b-white {
+    opacity: 0; /* Hide White 'B' */
+}
+
+[data-theme="light"] .b-orange {
+    opacity: 1; /* Show Orange 'B' */
+}
+
+/* Responsive adjustment */
+@media (max-width: 1024px) {
+    .badge-center-wrapper {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @keyframes spin {
@@ -574,7 +673,7 @@ body.footer-cursor-mode .c-active {
     background: var(--cream);
     color: var(--brown);
     padding: 1.5rem 0;
-    transform: rotate(-2deg) scale(1.05);
+    transform: rotate(-4deg) scale(1.05);
     white-space: nowrap;
     width: 110%;
     margin-left: -5%;
@@ -620,8 +719,12 @@ body.footer-cursor-mode .c-active {
 }
 
 .intro-visual img {
-    width: 300px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 450px;    /* Allows the image to be larger/clearer */
+    height: auto;        /* Maintains original aspect ratio */
+    border-radius: 20px; /* Slight consistent curve, but not a circle */
+    display: block;
+    object-fit: cover;
 }
 
 .container {
@@ -673,10 +776,54 @@ body.footer-cursor-mode .c-active {
     color: var(--brown);
 }
 
+/* Stats/Metrics Part  */
+.stats-wrapper {
+    display: flex;
+    gap: 4rem;
+    border-top: 1px solid rgba(239, 236, 206, 0.2);
+    padding-top: 2rem;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
+    font-family: var(--font-head);
+    font-size: 3.5rem;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .stats-wrapper {
+        gap: 2rem;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+
 /* ========================
    NEW AGENCY ABOUT SECTION
    ======================== */
-.agency-about-section {
+/* .agency-about-section {
     padding: 10rem 0;
     background-color: var(--brown);
     color: var(--cream);
@@ -787,12 +934,232 @@ body.footer-cursor-mode .c-active {
         flex-direction: column;
         gap: 2rem;
     }
+} */
+
+/* ========================
+   MISSION & VISION (FINAL FIX)
+   ======================== */
+.agency-about-section {
+    padding: 8rem 0;
+    background-color: var(--brown);
+    color: var(--cream);
+    overflow: hidden;
+}
+
+/* --- 1. HEADER --- */
+.mv-header-unique {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(239, 236, 206, 0.2);
+}
+
+.mv-label-col {
+    width: 50px;
+    position: relative;
+}
+
+.label-large {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--orange);
+    display: inline-block;
+    white-space: nowrap;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: left center;
+    position: absolute;
+    left: 10px;
+    top: 50px;
+}
+
+.mv-headline-col {
+    max-width: 85%;
+    text-align: right;
+}
+
+/* FONT FIX: Force font-weight normal so Yaro loads correctly */
+.mv-title-large {
+    font-family: 'Yaro', serif !important; 
+    font-weight: normal !important; /* CRITICAL FIX */
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 1;
+    color: var(--cream);
+}
+
+/* --- 2. ROW LAYOUT --- */
+.mv-row {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Image Col / Text Col */
+    gap: 4rem;
+    align-items: center; /* Center vertically, DO NOT STRETCH */
+    /* margin-bottom: 8rem; */
+}
+
+/* --- 3. IMAGE STYLING (NATURAL & CONTROLLABLE) --- */
+.mv-visual {
+    width: 100%;
+    height: auto !important; /* Let image dictate height */
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    
+    /* Centers image if you make it smaller */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.mv-img {
+    display: block;
+    width: 100%;       /* Default: Fill width of container */
+    height: auto !important; /* Maintain Original Aspect Ratio */
+    max-width: 100%;   /* Ensure it never overflows */
+    object-fit: contain; 
+    border-radius: 20px;
+}
+
+/* --- 4. TEXT CONTENT --- */
+.mv-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mv-subhead {
+    font-family: 'Yaro', serif !important; 
+    font-weight: normal !important; /* CRITICAL FIX */
+    font-size: 3.5rem;
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.mv-desc {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    line-height: 1.2;
+    opacity: 0.85;
+    /* max-width: 90%; */
+}
+
+/* Vision Quote */
+.mv-quote-box {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--orange);
+}
+
+.mv-bold-text {
+    font-family: 'Yaro', serif !important; 
+    font-weight: normal !important; /* CRITICAL FIX */
+    font-size: 1.8rem;
+    line-height: 1.3;
+    color: var(--cream);
+}
+
+/* --- 5. REVERSE LAYOUT --- */
+.reverse-layout {
+    grid-template-columns: 1.2fr 1fr;
+}
+.reverse-layout .mv-content {
+    order: 1; 
+    padding-right: 2rem;
+}
+.reverse-layout .mv-visual {
+    order: 2;
+}
+
+/* --- 6. FOOTER BUTTON (RESTORED) --- */
+.mv-footer-btn {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 4rem; */
+}
+
+.lets-talk-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-reveal {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 4rem;
+    background: transparent;
+    border: 1px solid var(--cream);
+    border-radius: 60px;
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.4s ease;
+    width: 320px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-text-front,
+.btn-text-back {
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.btn-text-back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    width: 100%;
+    color: var(--brown);
+    font-family: 'Yaro', serif; 
+    font-weight: normal;
+    font-size: 1.4rem;
+}
+
+.btn-reveal:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+}
+
+.btn-reveal:hover .btn-text-front {
+    transform: translateY(-200%);
+}
+
+.btn-reveal:hover .btn-text-back {
+    transform: translate(-50%, -50%);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .mv-header-unique {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+    .mv-label-col { width: 100%; height: auto; }
+    .label-large { position: relative; transform: none; left: 0; top: 0; }
+    .mv-headline-col { max-width: 100%; text-align: left; }
+
+    .mv-row, .reverse-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: center; 
+    }
+    .reverse-layout .mv-content { order: 2; padding-right: 0; }
+    .reverse-layout .mv-visual { order: 1; }
 }
 
 /* ========================
    7. HORIZONTAL WORK
    ======================== */
-.work-section {
+/* .work-section {
     padding: 5rem 0;
     overflow: hidden;
 }
@@ -856,6 +1223,395 @@ body.footer-cursor-mode .c-active {
 
 .work-info p {
     opacity: 0.7;
+} */
+
+/* ========================
+   7. HORIZONTAL WORK (UPDATED)
+   ======================== */
+.work-section {
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+.work-sticky-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.work-header {
+    padding-left: 5%;
+    margin-bottom: 3rem;
+}
+
+.work-header h2 {
+    font-family: var(--font-head);
+    font-size: 4rem;
+}
+
+.horizontal-track {
+    display: flex;
+    gap: 4rem;
+    padding-left: 5%;
+    width: max-content;
+}
+
+/* --- WORK CARD STYLING --- */
+.work-card {
+    width: 28vw; /* Slightly wider to fit text */
+    max-width: 500px;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-10px);
+}
+
+.work-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    position: relative;
+    background: #000;
+}
+
+.work-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s, opacity 0.3s;
+    opacity: 0.9;
+}
+
+/* Hover Effect: Image zooms & overlay appears */
+.work-card:hover .work-img img {
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.work-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.view-btn {
+    font-family: var(--font-body);
+    color: #efecce;
+    border: 1px solid #efecce;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.work-info h3 {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    color: var(--orange);
+    margin-bottom: 0.5rem;
+}
+
+.client-list {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    opacity: 0.7;
+    line-height: 1.5;
+}
+
+/* ========================
+   PROJECT MODAL (NEW)
+   ======================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Dark dim background */
+    backdrop-filter: blur(10px);
+    z-index: 10001; /* Above everything */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    width: 90%;
+    max-width: 1200px;
+    height: 85vh;
+    background: var(--cream);
+    color: var(--brown);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(50px);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.modal-overlay.open .modal-container {
+    transform: translateY(0);
+}
+
+.modal-header {
+    padding: 2rem 3rem;
+    border-bottom: 1px solid rgba(66, 60, 59, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cream);
+}
+
+.modal-header h2 {
+    font-family: var(--font-head);
+    font-size: 3rem;
+    color: var(--orange);
+    margin: 0;
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--brown);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.close-modal-btn:hover {
+    transform: rotate(90deg);
+    color: var(--orange);
+}
+
+.modal-body {
+    padding: 3rem;
+    overflow-y: auto; /* Enable vertical scrolling */
+    flex-grow: 1;
+    
+    /* FIX: Prevent scroll chaining (scrolling parent when modal ends) */
+    overscroll-behavior: contain;
+    
+    /* Smooth momentum scrolling on mobile */
+    -webkit-overflow-scrolling: touch; 
+}
+
+/* --- CUSTOM SCROLLBAR FOR MODAL --- */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--orange); /* Brand color scroll handle */
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #d6761f;
+}
+
+/* --- MODAL GRID --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-media {
+    width: 100%;
+    aspect-ratio: 1/1; /* Square thumbnails */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ccc;
+    position: relative;
+}
+
+.project-media img, 
+.project-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-item:hover .project-media img {
+    transform: scale(1.05);
+}
+
+.project-client-name {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    color: var(--brown);
+}
+
+/* --- LIGHT MODE FIXES FOR MODAL --- */
+
+[data-theme="light"] .modal-container {
+    background: #ffffff;
+    /* This sets the default text, but specific classes override it */
+    color: #423c3b; 
+}
+
+/* 1. Fix the Client Names (Brand Names) */
+[data-theme="light"] .project-client-name {
+    color: #423c3b; /* Force Dark Brown */
+}
+
+/* 2. Fix the Close 'X' Button (It was also invisible) */
+[data-theme="light"] .close-modal-btn {
+    color: #423c3b; 
+}
+
+/* 3. Ensure the Modal Header Background matches */
+[data-theme="light"] .modal-header {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(66, 60, 59, 0.1);
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .work-card {
+        width: 80vw;
+    }
+    
+    .modal-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    
+    .modal-header h2 {
+        font-size: 2rem;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+}
+
+/* ========================
+   LIGHTBOX (FULL SCREEN VIEW) - FIXED
+   ======================== */
+.lightbox-overlay {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10005; /* High Z-Index */
+    
+    /* HIDDEN STATE */
+    opacity: 0; 
+    visibility: hidden;      
+    pointer-events: none;    
+    
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-overlay.active {
+    /* ACTIVE STATE */
+    opacity: 1; 
+    visibility: visible;     
+    pointer-events: all;     
+}
+
+.lightbox-content {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10006; /* Above overlay */
+}
+
+.lightbox-content img, 
+.lightbox-content video {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========================
+   LIGHTBOX CLOSE BUTTON FIX
+   ======================== */
+.lightbox-close {
+    position: absolute;
+    top: 2rem; 
+    right: 2rem;
+    background: none; 
+    border: none;
+    color: #fff; 
+    font-size: 3rem; 
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    
+    /* FIX: Maximum Z-Index to stay above everything */
+    z-index: 100000; 
+    pointer-events: auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+}
+
+/* Ensure the icon itself doesn't block the button click */
+.lightbox-close i {
+    pointer-events: none;
+}
+
+.lightbox-close:hover {
+    transform: rotate(90deg);
+    color: var(--orange);
 }
 
 /* ========================
@@ -887,7 +1643,7 @@ body.footer-cursor-mode .c-active {
     padding: 4rem;
     border-radius: 20px;
     margin-bottom: 4rem;
-    min-height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -914,7 +1670,7 @@ body.footer-cursor-mode .c-active {
 .svc-num {
     font-family: var(--font-head);
     font-size: 4rem;
-    opacity: 0.3;
+    opacity: 0.8;
     margin-bottom: 1rem;
     display: block;
 }
@@ -956,10 +1712,381 @@ body.footer-cursor-mode .c-active {
 }
 
 /* ========================
+   7b. CLIENTELE SECTION (TABBED)
+   ======================== */
+.clientele-section {
+    padding: 8rem 0;
+    background-color: var(--brown);
+    border-top: 1px solid rgba(239, 236, 206, 0.1);
+    min-height: 80vh; /* Ensure enough height for content */
+}
+
+.client-tabs-wrapper {
+    display: grid;
+    grid-template-columns: 0.8fr 2fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* --- LEFT MENU (Tabs) --- */
+.tab-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-left: 1px solid rgba(239, 236, 206, 0.1);
+    padding-left: 2rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-head);
+    font-size: 2.5rem;
+    color: var(--cream);
+    opacity: 0.4;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.tab-btn:hover {
+    opacity: 0.8;
+    color: var(--orange);
+    transform: translateX(10px);
+}
+
+.tab-btn.active {
+    opacity: 1;
+    color: var(--orange);
+    transform: translateX(10px);
+    /* Add a small indicator dot or line if desired */
+    text-shadow: 0 0 20px rgba(246, 136, 35, 0.3);
+}
+
+/* --- RIGHT CONTENT (Panels) --- */
+.client-display-area {
+    position: relative;
+    min-height: 400px; /* Prevent collapse */
+}
+
+.client-panel {
+    display: none; /* Hidden by default */
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.client-panel.active-panel {
+    display: block; /* Show active one */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.client-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* --- CLIENT CARD --- */
+.client-box {
+    aspect-ratio: 3/2;
+    background: rgba(239, 236, 206, 0.03);
+    border: 1px solid rgba(239, 236, 206, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.client-box:hover {
+    border-color: var(--orange);
+    background: rgba(246, 136, 35, 0.1);
+    transform: translateY(-5px);
+}
+
+.c-name {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cream);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- RESPONSIVE (MOBILE TABS) --- */
+@media (max-width: 992px) {
+    .client-tabs-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .tab-buttons {
+        flex-direction: row;
+        border-left: none;
+        padding-left: 0;
+        overflow-x: auto; /* Allow horizontal scroll */
+        white-space: nowrap;
+        padding-bottom: 1rem;
+        /* Hide scrollbar for cleaner look */
+        -ms-overflow-style: none;  
+        scrollbar-width: none;  
+    }
+    
+    .tab-buttons::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab-btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+        border: 1px solid rgba(239, 236, 206, 0.2);
+        border-radius: 50px;
+        opacity: 0.7;
+        transform: none !important; /* Disable desktop hover slide */
+    }
+
+    .tab-btn.active {
+        background: var(--orange);
+        color: var(--cream); /* White text on active orange btn */
+        border-color: var(--orange);
+        opacity: 1;
+        transform: none !important;
+    }
+
+    .client-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .client-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================
+   LIGHT MODE FIXES (CORRECTED)
+   ======================== */
+
+/* 1. Make the Vertical Divider Line Dark */
+[data-theme="light"] .tab-buttons {
+    border-left: 1px solid rgba(66, 60, 59, 0.2); 
+}
+
+/* 2. Make Client Box Borders Dark */
+[data-theme="light"] .client-box {
+    border-color: rgba(66, 60, 59, 0.15);
+    background: rgba(66, 60, 59, 0.03); 
+    color: #423c3b; /* Dark Brown Text */
+}
+
+[data-theme="light"] .client-box:hover {
+    border-color: var(--orange);
+    background: rgba(246, 136, 35, 0.1);
+}
+
+/* 3. FIX: INDUSTRY NAMES VISIBILITY */
+[data-theme="light"] .tab-btn {
+    /* Use the HEX code for Dark Brown to ensure it is visible */
+    color: #423c3b !important; 
+    opacity: 0.5;
+}
+
+[data-theme="light"] .tab-btn.active {
+    color: #f68823 !important; /* Active stays Orange */
+    opacity: 1;
+    text-shadow: none; /* Remove glow if it looks muddy in light mode */
+}
+
+[data-theme="light"] .tab-btn:hover {
+    color: #f68823 !important; /* Hover turns Orange */
+    opacity: 1;
+}
+
+/* 4. Fix the '[ Who Trusts Us ]' Label if needed */
+[data-theme="light"] .client-menu .label {
+    color: #f68823; /* Ensure label remains Orange */
+}
+
+/* ========================
+   7c. KARIGAR (FOUNDERS) SECTION
+   ======================== */
+.founders-section {
+    padding: 8rem 0;
+    /* Inverted Theme: Cream BG, Brown Text */
+    background-color: var(--cream); 
+    color: var(--brown);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.founders-header {
+    margin-bottom: 5rem;
+}
+
+.label-dark {
+    display: block;
+    color: var(--orange);
+    font-family: var(--font-body);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.founders-title {
+    font-family: var(--font-head);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1;
+    color: var(--brown);
+}
+
+/* --- GRID LAYOUT --- */
+.founders-grid {
+    display: grid;
+    /* EQUAL SPLIT: 1fr | Line | 1fr */
+    grid-template-columns: 1fr 1px 1fr; 
+    gap: 4rem;
+    align-items: start;
+}
+
+.founder-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* --- FOUNDER IMAGE (CENTERED) --- */
+.founder-visual {
+    width: 100%;
+    max-width: 350px; 
+    aspect-ratio: 3/4; 
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(66, 60, 59, 0.1);
+    
+    /* CENTER THE IMAGE */
+    margin: 0 auto 1rem auto; 
+    display: block;
+}
+
+.founder-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- TYPOGRAPHY --- */
+.founder-name {
+    font-family: var(--font-head);
+    font-size: 2.5rem;
+    color: var(--brown);
+    margin-bottom: 1.5rem;
+    /* Optional: If you want name centered too, uncomment below */
+    /* text-align: center; */
+}
+
+.founder-text {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    color: var(--brown);
+}
+
+.highlight-bold {
+    font-weight: 700;
+    color: var(--orange);
+}
+
+/* --- LIST FOR DISHA (NO BULLETS) --- */
+.founder-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Increased gap for better readability without bullets */
+}
+
+.founder-list li {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--brown);
+    position: relative;
+    padding-left: 0; /* Removed Indent */
+}
+
+/* Removed the ::before bullet rule entirely */
+
+/* --- VERTICAL DIVIDER --- */
+.founder-divider {
+    width: 1px;
+    background-color: rgba(66, 60, 59, 0.2);
+    height: 100%;
+    min-height: 400px; 
+}
+
+/* ========================
+   LIGHT MODE FIXES (INVERSION)
+   ======================== */
+[data-theme="light"] .founders-section {
+    background-color: #423c3b; /* Dark Brown BG */
+    color: #efecce; /* Cream Text */
+}
+
+[data-theme="light"] .founders-title,
+[data-theme="light"] .founder-name,
+[data-theme="light"] .founder-text,
+[data-theme="light"] .founder-list li {
+    color: #efecce;
+}
+
+[data-theme="light"] .founder-divider {
+    background-color: rgba(239, 236, 206, 0.2);
+}
+
+[data-theme="light"] .founder-visual {
+    border-color: rgba(239, 236, 206, 0.2);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .founders-grid {
+        grid-template-columns: 1fr; /* Stack vertically on mobile */
+        gap: 5rem;
+    }
+    
+    .founder-divider {
+        display: none;
+    }
+    
+    .founder-visual {
+        max-width: 100%; 
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .founder-name {
+        font-size: 2rem;
+    }
+}
+
+/* ========================
    9. CONTACT FORM
    ======================== */
 .contact-section {
-    padding: 8rem 0;
+    padding: 8rem 0 5rem;
     background: var(--brown);
     position: relative;
     z-index: 2;
@@ -1003,6 +2130,32 @@ body.footer-cursor-mode .c-active {
 .simple-form input:focus,
 .simple-form textarea:focus {
     border-color: var(--orange);
+}
+
+/* Styling for the new Mail Text */
+.contact-mail-text {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+    opacity: 0.8;
+}
+
+.contact-mail-text a {
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.contact-mail-text a:hover {
+    color: var(--orange);
+    border-bottom: 1px solid var(--orange);
+}
+
+/* Optional: Improve phone number input visual */
+.simple-form input[type="tel"] {
+    letter-spacing: 1px;
 }
 
 /* ========================

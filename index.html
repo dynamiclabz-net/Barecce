@@ -18,8 +18,16 @@
 </head>
 <body>
 
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="counter">0</div>
+    </div> -->
+
+    <div class="preloader">
+        <div class="loader-content">
+            <h1 class="loader-text">अ</h1>
+            
+            <img src="images/brand-logo-orange.PNG" alt="Barecce Logo" class="loader-logo">
+        </div>
     </div>
 
     <div class="noise-overlay"></div>
@@ -37,8 +45,8 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo-wrap" data-magnetic>
-            <a href="#home">
-                <img src="images/brand-text-white.PNG" alt="Barecce" class="nav-logo-img">
+            <a href="#mega-hero" style="text-decoration: none;">
+                <span class="nav-logo-text">बारीकी</span>
             </a>
         </div>
         <div class="menu-toggle" data-magnetic>
@@ -49,17 +57,26 @@
         </div>
     </nav>
 
+    <!-- Hamburger Menu -->
     <div class="menu-overlay">
         <div class="menu-nav">
-            <a href="#home" class="menu-link">Home</a>
-            <a href="#work" class="menu-link">Work</a>
+            <a href="#home" class="menu-link">Ghar (Home)</a>
+            
+            <a href="#work" class="menu-link">Portfolio</a>
+            
             <a href="#services" class="menu-link">Services</a>
+            
+            <a href="#clients" class="menu-link">Clientelle</a>
+            
+            <a href="#team" class="menu-link">Karigar (Team)</a>
+            
             <a href="#contact" class="menu-link">Contact</a>
         </div>
     </div>
 
     <main id="main-content">
 
+        <!-- 1. Hero Section -->
         <section id="mega-hero" class="mega-hero-section" data-scroll-section>
             <div class="mega-text-container">
                 <img src="images/brand-text-orange.PNG" alt="BARECCE" class="mega-brand-img">
@@ -86,13 +103,14 @@
             </div>
         </section> -->
 
+        <!-- 2. Sub-Hero Section -->
         <section id="home" class="hero-section">
             <div class="container hero-container">
                 <div class="hero-text">
                     <h1 class="hero-title reveal-text">
-                        <span class="row-1">Strategy,</span><br>
-                        <span class="row-2 text-outline">Design</span><br>
-                        <span class="row-3">& Perspectives.</span>
+                        <span class="row-1">Your glad to be</span><br>
+                        <span class="row-2 text-outline">Social Media</span><br>
+                        <span class="row-3">AGenz.</span>
                     </h1>
                 </div>
                 
@@ -105,12 +123,13 @@
                                 <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
                                 <text>
                                     <textPath xlink:href="#circlePath" fill="currentColor">
-                                        BARECCE AGENCY • EST 2024 •
+                                        BARECCE EST. 2025 • BARECCE EST. 2025 •
                                     </textPath>
                                 </text>
                             </svg>
-                            <div class="badge-arrow">
-                                <i class="fas fa-arrow-down"></i>
+                            <div class="badge-center-wrapper">
+                                <img src="images/brand-logo-white.PNG" alt="B" class="badge-img b-white">
+                                <img src="images/brand-logo-grey.png" alt="B" class="badge-img b-orange">
                             </div>
                         </div>
                     </div>
@@ -123,54 +142,47 @@
             </div>
         </section>
 
+        <!-- 3. Marquee Part -->
         <div class="marquee-container">
             <div class="marquee-wrapper">
                 <div class="marquee-track">
-                    <span>Social Strategy</span> <i class="fas fa-star"></i>
-                    <span>Content Production</span> <i class="fas fa-star"></i>
-                    <span>Performance Ads</span> <i class="fas fa-star"></i>
+                    <span>Social Media Strategy</span> <i class="fas fa-star"></i>
                     <span>Branding</span> <i class="fas fa-star"></i>
-                    <span>Digital Marketing</span> <i class="fas fa-star"></i>
-                    <span>Social Strategy</span> <i class="fas fa-star"></i>
-                    <span>Content Production</span> <i class="fas fa-star"></i>
-                    <span>Performance Ads</span> <i class="fas fa-star"></i>
+                    <span>Design & Print</span> <i class="fas fa-star"></i>
+                    <span>Event Marketing</span> <i class="fas fa-star"></i>
+                    <span>Personal Branding</span> <i class="fas fa-star"></i>
+                    <span>Influencer Marketing</span> <i class="fas fa-star"></i>
+                    <span>Meta & Linkedin Ads</span> <i class="fas fa-star"></i>
+                    
+                    <span>Social Media Strategy</span> <i class="fas fa-star"></i>
+                    <span>Branding</span> <i class="fas fa-star"></i>
+                    <span>Design & Print</span> <i class="fas fa-star"></i>
+                    <span>Event Marketing</span> <i class="fas fa-star"></i>
+                    <span>Personal Branding</span> <i class="fas fa-star"></i>
+                    <span>Influencer Marketing</span> <i class="fas fa-star"></i>
+                    <span>Meta & Linkedin Ads</span> <i class="fas fa-star"></i>
                 </div>
             </div>
         </div>
 
+        <!-- 4. About Us/Who We Are Section -->
         <section id="about" class="intro-section">
             <div class="container intro-grid">
+                
                 <div class="intro-visual" data-magnetic>
-                    <img src="images/asset1.jpeg" alt="Illustration">
+                    <img src="images/WhoWeAre.png" alt="Who We Are">
                 </div>
+                
                 <div class="intro-content">
                     <span class="label">[ Who We Are ]</span>
-                    <p class="intro-text reveal-text">
-                        Be the brand they <span class="highlight">never&nbsp;stop</span> talking about. 
-                        Social media isn't static. It's about energy. We bring together strategy and storytelling.
-                    </p>
-                    <a href="#contact" class="btn-pill" data-magnetic>Let's Talk</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="agency-about-section">
-            <div class="container about-detail-grid">
-                <div class="about-visual">
-                    <div class="img-frame">
-                        <img src="images/asset3.jpeg" alt="Barecce Team" class="about-img parallax-img">
-                    </div>
-                </div>
-                <div class="about-info">
-                    <span class="label">[ The Agency ]</span>
-                    <h2 class="about-title reveal-text">
-                        We don't just post.<br>
-                        We <span class="highlight">propel.</span>
-                    </h2>
-                    <p class="about-desc">
-                        Barecce isn't your typical agency. We are a collective of strategists, creators, and data-nerds obsessed with ROI. While others chase fleeting trends, we build sustainable digital ecosystems that turn followers into loyal customers.
-                    </p>
                     
+                    <p class="intro-text reveal-text">
+                        A <span class="highlight">creative agency</span> by bunch of <span class="highlight">cultured wizards</span> who believes in thinking next for <span class="highlight">next gen</span>.
+                    </p>
+                    <p class="intro-text reveal-text" style="margin-top: 1rem;">
+                        We walk your <span class="highlight">socials</span> so you can run your <span class="highlight">brand</span>.
+                    </p>
+
                     <div class="stats-wrapper">
                         <div class="stat-box">
                             <span class="stat-num">3+</span>
@@ -189,51 +201,152 @@
             </div>
         </section>
 
+        <!-- 5. Mission & Vision Section -->
+        <section class="agency-about-section">
+            <div class="container">
+                
+                <div class="mv-header-unique">
+                    <div class="mv-label-col">
+                        <span class="label-large">[ Mission & Vision ]</span>
+                    </div>
+                    <div class="mv-headline-col">
+                        <h2 class="mv-title-large reveal-text">
+                            We don’t just post,<br>
+                            we <span class="highlight">propel.</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="mv-row">
+                    <div class="mv-visual" data-magnetic>
+                        <img src="images/noodles.png" alt="Our Mission" class="mv-img" style="width: 60%;">
+                    </div>
+                    <div class="mv-content">
+                        <h3 class="mv-subhead">The Mission</h3>
+                        <p class="mv-desc">
+                            Barecce exist to help SMEs, Startups, Creators, Local businesses & Events to show up louder, better, sharper. 
+                            <br><br>
+                            We are on a mission to become a <span class="highlight">marketing powerhouse</span> that local brands didn’t know they needed, until now.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mv-row reverse-layout">
+                    <div class="mv-content">
+                        <h3 class="mv-subhead">The Vision</h3>
+                        <p class="mv-desc">
+                            We repeat what works, refine what doesn’t, and <span class="highlight">evolve</span> with every story we tell.
+                        </p>
+                        
+                        <div class="mv-quote-box">
+                            <p class="mv-bold-text">
+                                At Barecce we are not building campaigns, we are building <span class="highlight">culture, community</span> and stories that stick.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mv-visual" data-magnetic>
+                        <img src="images/cow.png" alt="Our Vision" class="mv-img" style="width: 100%;">
+                    </div>
+                </div>
+
+                <div class="mv-footer-btn">
+                    <div class="lets-talk-wrapper">
+                        <a href="tel:+917990380933" class="btn-reveal">
+                            <span class="btn-text-front">Let's Talk</span>
+                            <span class="btn-text-back">+91 7990380933</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. Portfolio Section -->
         <section id="work" class="work-section">
             <div class="work-sticky-wrapper">
                 <div class="container work-header">
-                    <span class="label">[ Selected Work ]</span>
-                    <h2>Our Portfolio</h2>
+                    <span class="label">[ Kaarigari ]</span>
+                    <h2>Selected Work</h2>
                 </div>
+                
                 <div class="horizontal-track">
                     
-                    <div class="work-card">
+                    <div class="work-card" onclick="openProjectModal(1)">
                         <div class="work-img">
-                            <img src="images/asset2.jpeg" alt="Packaging">
+                            <img src="images/asset1.jpeg" alt="Brand Identity">
+                            <div class="card-overlay">
+                                <span class="view-btn">View Projects <i class="fas fa-arrow-right"></i></span>
+                            </div>
                         </div>
                         <div class="work-info">
-                            <h3>Brand Packaging</h3>
-                            <p>Consumer Goods</p>
+                            <h3>Logo & Brand Identity</h3>
+                            <p class="client-list">Barecce, Tara Bakes, Bakers Hub, SNX, Aqua Valley, Melo Kidz...</p>
                         </div>
                     </div>
 
-                    <div class="work-card">
+                    <div class="work-card" onclick="openProjectModal(2)">
                         <div class="work-img">
-                            <img src="images/asset4.jpeg" alt="Eyewear">
+                            <img src="images/asset3.jpeg" alt="Video Strategy">
+                            <div class="card-overlay">
+                                <span class="view-btn">View Projects <i class="fas fa-arrow-right"></i></span>
+                            </div>
                         </div>
                         <div class="work-info">
-                            <h3>Almost Bare</h3>
-                            <p>Product Launch</p>
+                            <h3>Video Content Strategy</h3>
+                            <p class="client-list">Aqua Valley, Sweetmist, Bakers Hub</p>
                         </div>
                     </div>
 
-                    <div class="work-card">
+                    <div class="work-card" onclick="openProjectModal(3)">
                         <div class="work-img">
-                            <img src="images/asset3.jpeg" alt="Campaign">
+                            <img src="images/asset2.jpeg" alt="Events">
+                            <div class="card-overlay">
+                                <span class="view-btn">View Projects <i class="fas fa-arrow-right"></i></span>
+                            </div>
                         </div>
                         <div class="work-info">
-                            <h3>Eat & Repeat</h3>
-                            <p>Food & Beverage</p>
+                            <h3>Event Marketing</h3>
+                            <p class="client-list">Emprado Beauty Land, Vibe with the night</p>
                         </div>
                     </div>
 
-                    <div class="work-card">
+                    <div class="work-card" onclick="openProjectModal(4)">
                         <div class="work-img">
-                            <img src="images/asset1.jpeg" alt="Print">
+                            <img src="images/asset4.jpeg" alt="Social Feed">
+                            <div class="card-overlay">
+                                <span class="view-btn">View Projects <i class="fas fa-arrow-right"></i></span>
+                            </div>
                         </div>
                         <div class="work-info">
-                            <h3>Editorial</h3>
-                            <p>Print Media</p>
+                            <h3>Social Media Feed</h3>
+                            <p class="client-list">Aqua Valley, Aahvi, Bakers Hub</p>
+                        </div>
+                    </div>
+
+                    <div class="work-card" onclick="openProjectModal(5)">
+                        <div class="work-img">
+                            <img src="images/asset1.jpeg" alt="Print Media">
+                            <div class="card-overlay">
+                                <span class="view-btn">View Projects <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <h3>Print Media</h3>
+                            <p class="client-list">Brochures, Flyers, Packaging & More</p>
+                        </div>
+                    </div>
+
+                    <div class="work-card" onclick="openProjectModal(6)">
+                        <div class="work-img">
+                            <img src="images/service-2.png" alt="Creatives" style="object-fit: contain; background: #221e1d;">
+                            <div class="card-overlay">
+                                <span class="view-btn">View Projects <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <h3>Designs & Creatives</h3>
+                            <p class="client-list">Social Posts, Ad Creatives, Banners</p>
                         </div>
                     </div>
 
@@ -241,6 +354,32 @@
             </div>
         </section>
 
+        <!-- Portfolio Section Modal -->
+        <div id="project-modal" class="modal-overlay">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h2 id="modal-title">Project Title</h2>
+                    <button class="close-modal-btn" onclick="closeProjectModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+        
+                <div class="modal-body" id="modal-content" data-lenis-prevent tabindex="-1">
+                </div>
+            </div>
+        </div>
+
+        <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+        
+            <button class="lightbox-close" type="button">
+                <i class="fas fa-times"></i>
+            </button>
+        
+            <div class="lightbox-content" id="lightbox-wrapper" onclick="event.stopPropagation()">
+            </div>
+        </div>
+
+        <!-- 7. Services Section -->
         <section id="services" class="services-section">
             <div class="container">
                 <div class="services-header">
@@ -249,59 +388,224 @@
                 </div>
                 
                 <div class="cards-stack">
+                    
                     <div class="service-card cream-card">
                         <span class="svc-num">01</span>
-                        <h3>Social Strategy</h3>
-                        <p>We help you show up the same way everywhere with data-driven social strategies.</p>
-                        <img src="images/1 (8).png" class="svc-icon" alt="Social Strategy Icon">
+                        <h3>Social Media Strategy</h3>
+                        <p>No we are not limiting things to Instagram. Youtube, Pinterest, Whatsapp deserve your work too!! Not only reels but static & carousel too.</p>
+                        <img src="images/1 (8).png" class="svc-icon" alt="Strategy Icon">
                     </div>
                 
                     <div class="service-card orange-card">
                         <span class="svc-num">02</span>
-                        <h3>Content Production</h3>
-                        <p>Good content tells a story. We create visuals that stand out and stop the scroll.</p>
+                        <h3>Content Strategy</h3>
+                        <p>Not just Photoshoots but storytelling like never before. This one we only do aesthetically sorry!</p>
                         <img src="images/service-2.png" class="svc-icon" alt="Content Icon">
                     </div>
                 
                     <div class="service-card dark-card">
                         <span class="svc-num">03</span>
-                        <h3>Performance Ads</h3>
-                        <p>Data-driven campaigns designed to maximize ROI and drive real business growth.</p>
-                        <img src="images/service-3.png" class="svc-icon" alt="Ads Icon">
+                        <h3>Branding</h3>
+                        <p>Logos are cute, but personality is hotter. We build brands people recognise, remember, and low-key obsess over.</p>
+                        <img src="images/service-5.png" class="svc-icon" alt="Branding Icon">
                     </div>
                 
                     <div class="service-card cream-card">
                         <span class="svc-num">04</span>
-                        <h3>Influencer Marketing</h3>
-                        <p>Connect with audiences through authentic voices that resonate and drive engagement.</p>
-                        <img src="images/service-4.png" class="svc-icon" alt="Influencer Icon">
+                        <h3>Design & Print</h3>
+                        <p>We help you speak out loud even before your product/service is ready.</p>
+                        <img src="images/service-2.png" class="svc-icon" alt="Design Icon">
                     </div>
                 
                     <div class="service-card orange-card">
                         <span class="svc-num">05</span>
-                        <h3>Branding</h3>
-                        <p>We create brand identities that feel right. Meaningful, memorable, and built to last.</p>
-                        <img src="images/service-5.png" class="svc-icon" alt="Branding Icon">
+                        <h3>Event Marketing</h3>
+                        <p>If people are not talking about your event before it happens… did it even happen? We build hype, FOMO and full house moments.</p>
+                        <img src="images/service-6.png" class="svc-icon" alt="Event Icon">
                     </div>
                 
                     <div class="service-card dark-card">
                         <span class="svc-num">06</span>
-                        <h3>Digital Marketing</h3>
-                        <p>Comprehensive solutions including SEO and multi-channel strategies.</p>
-                        <img src="images/service-6.png" class="svc-icon" alt="Marketing Icon">
+                        <h3>Personal Branding</h3>
+                        <p>Because “just posting yourself” is not personal branding. We build presence, authority, and main-character energy for you.</p>
+                        <img src="images/service-4.png" class="svc-icon" alt="Personal Brand Icon">
                     </div>
                 
                     <div class="service-card cream-card">
                         <span class="svc-num">07</span>
+                        <h3>Channel & Community Engagement</h3>
+                        <p>Ye bhi koi bolne ki baat hai?? We will make your customers love you!</p>
+                        <img src="images/service-4.png" class="svc-icon" alt="Community Icon">
+                    </div>
+
+                    <div class="service-card orange-card">
+                        <span class="svc-num">08</span>
+                        <h3>Business Profile</h3>
+                        <p>This is the key, trust us! We can make you seen across all socials.</p>
+                        <img src="images/service-3.png" class="svc-icon" alt="Business Profile Icon">
+                    </div>
+
+                    <div class="service-card dark-card">
+                        <span class="svc-num">09</span>
+                        <h3>Influencer Marketing & UGC</h3>
+                        <p>Not random collabs. Only vibe checks passed. We connect you with creators who actually make sense for your brand.</p>
+                        <img src="images/service-4.png" class="svc-icon" alt="Influencer Icon">
+                    </div>
+
+                    <div class="service-card cream-card">
+                        <span class="svc-num">10</span>
+                        <h3>Meta & LinkedIn Ads</h3>
+                        <p>We believe in Conversion. NO BS! People converted to your customers via Meta ads.</p>
+                        <img src="images/service-3.png" class="svc-icon" alt="Ads Icon">
+                    </div>
+
+                    <div class="service-card orange-card">
+                        <span class="svc-num">11</span>
                         <h3>Website Development</h3>
-                        <p>We design sites that are easy to use and built to grow with your business.</p>
+                        <p>Pretty websites are easy. Websites that make people stay, click, and buy? That’s where we come in.</p>
                         <img src="images/service-7.png" class="svc-icon" alt="Web Dev Icon">
+                    </div>
+
+                    <div class="service-card dark-card">
+                        <span class="svc-num">12</span>
+                        <h3>Bespoke Campaigns</h3>
+                        <p>No templates. No copy-paste. Only ideas built from scratch, stitched to your brand DNA.</p>
+                        <img src="images/service-5.png" class="svc-icon" alt="Campaign Icon">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Clientele Section -->
+        <section id="clients" class="clientele-section">
+            <div class="container">
+                
+                <div class="client-tabs-wrapper">
+                    <div class="client-menu">
+                        <span class="label" style="margin-bottom: 2rem; display:block;">[ Who Trusts Us ]</span>
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="tab-fb">F&B</button>
+                            <button class="tab-btn" data-tab="tab-retail">Retail</button>
+                            <button class="tab-btn" data-tab="tab-events">Events</button>
+                            <button class="tab-btn" data-tab="tab-tech">Tech & Realty</button>
+                            <button class="tab-btn" data-tab="tab-pharma">Pharma</button>
+                        </div>
+                    </div>
+
+                    <div class="client-display-area">
+                        
+                        <div id="tab-fb" class="client-panel active-panel">
+                            <div class="client-grid">
+                                <div class="client-box"><span class="c-name">Uppercrust</span></div>
+                                <div class="client-box"><span class="c-name">Lithosphere</span></div>
+                                <div class="client-box"><span class="c-name">London Coffee</span></div>
+                                <div class="client-box"><span class="c-name">Raj Thal</span></div>
+                                <div class="client-box"><span class="c-name">Dhriva Masala</span></div>
+                                <div class="client-box"><span class="c-name">Purvanchal Harvest</span></div>
+                                <div class="client-box"><span class="c-name">Vivah Salon</span></div>
+                                <div class="client-box"><span class="c-name">Sweet Mist</span></div>
+                                <div class="client-box"><span class="c-name">Bakers Hub</span></div>
+                                <div class="client-box"><span class="c-name">SNX NAILS</span></div>
+                                <div class="client-box"><span class="c-name">Aqua Valley</span></div>
+                            </div>
+                        </div>
+
+                        <div id="tab-retail" class="client-panel">
+                            <div class="client-grid">
+                                <div class="client-box"><span class="c-name">Melo Kidzz</span></div>
+                                <div class="client-box"><span class="c-name">Trendy Kiids</span></div>
+                                <div class="client-box"><span class="c-name">Pacifica Opticals</span></div>
+                                <div class="client-box"><span class="c-name">Pro Clean Machine</span></div>
+                                <div class="client-box"><span class="c-name">VVJewels</span></div>
+                                <div class="client-box"><span class="c-name">Aahvi Jewellery</span></div>
+                                <div class="client-box"><span class="c-name">Istaa Jewellery</span></div>
+                                <div class="client-box"><span class="c-name">Zevaa India</span></div>
+                                <div class="client-box"><span class="c-name">Toyzapp</span></div>
+                                <div class="client-box"><span class="c-name">The Mafia Vogue</span></div>
+                                <div class="client-box"><span class="c-name">SNX Nails</span></div>
+                            </div>
+                        </div>
+
+                        <div id="tab-events" class="client-panel">
+                            <div class="client-grid">
+                                <div class="client-box"><span class="c-name">Vibe Garba</span></div>
+                                <div class="client-box"><span class="c-name">Purefect Events</span></div>
+                                <div class="client-box"><span class="c-name">AIC Award Show</span></div>
+                                <div class="client-box"><span class="c-name">Emprado Beauty Land</span></div>
+                            </div>
+                        </div>
+
+                        <div id="tab-tech" class="client-panel">
+                            <div class="client-grid">
+                                <div class="client-box"><span class="c-name">Samsung V tech</span></div>
+                                <div class="client-box"><span class="c-name">Rashmi Real estate</span></div>
+                                <div class="client-box"><span class="c-name">Kalrav Farm House</span></div>
+                                <div class="client-box"><span class="c-name">Western Realty</span></div>
+                                <div class="client-box"><span class="c-name">Rewa Pearl</span></div>
+                            </div>
+                        </div>
+
+                        <div id="tab-pharma" class="client-panel">
+                            <div class="client-grid">
+                                <div class="client-box"><span class="c-name">Cavallo</span></div>
+                                <div class="client-box"><span class="c-name">Russamed</span></div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="contact-section">
+        <!-- 9. Karigar(Founders) Section -->
+        <section id="team" class="founders-section">
+            <div class="container">
+                
+                <div class="founders-header">
+                    <span class="label-dark">[ Karigar ]</span>
+                    <h2 class="founders-title reveal-text">Founder’s two cents</h2>
+                </div>
+
+                <div class="founders-grid">
+                    
+                    <div class="founder-card">
+                        <div class="founder-visual" data-magnetic>
+                            <img src="images/prasiddhi-jain-image.jpeg" alt="Prasiddhi Jain" class="founder-img">
+                        </div>
+                        <div class="founder-bio">
+                            <h3 class="founder-name reveal-text">Prasiddhi Jain</h3>
+                            <p class="founder-text reveal-text">
+                                I see Barecce collaborating with MSMEs who’ve hit a halt in growth, engagement, or conversions. There’s a gap when it comes to <span class="highlight-bold">outsourced marketing</span>. 
+                                <br><br>
+                                Agencies often fail to deliver the personal touch and freelancers sometimes miss the strategy. That’s the gap I want to fill through Barecce. With clarity, context, and content that actually works.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="founder-divider"></div>
+
+                    <div class="founder-card">
+                        <div class="founder-visual" data-magnetic>
+                            <img src="images/disha-jain-image.jpeg" alt="Disha Jain" class="founder-img">
+                        </div>
+                        <div class="founder-bio">
+                            <h3 class="founder-name reveal-text">Disha Jain</h3>
+                            <ul class="founder-list">
+                                <li class="reveal-text">I am gonna apologise for no cents here because I am probably busy designing somewhere, but I believe in doodling my way through ideas and detailing my way into your brand story.</li>
+                                <li class="reveal-text">Helping brands speak beyond words, beyond creatives, beyond just “looking good.”</li>
+                                <li class="reveal-text">And sorry (not sorry) if the mascot I design for your brand ends up communicating better than most humans to your customers.</li>
+                                <li class="reveal-text">I’ll save the rest of my quirk for work.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Contact Section -->
+        <section id="contact" class="contact-section">
             <div class="container">
                 <div class="contact-wrapper">
                     <div class="contact-left">
@@ -309,10 +613,17 @@
                     </div>
                     <div class="contact-right">
                         <form class="simple-form">
-                            <input type="text" placeholder="Your Name">
-                            <input type="email" placeholder="Email Address">
-                            <textarea placeholder="Tell us about your project"></textarea>
-                            <button type="button" class="btn-pill">Send Message</button>
+                            <input type="text" id="c-name" placeholder="Name">
+                            
+                            <input type="tel" id="c-phone" placeholder="Phone">
+                            
+                            <textarea id="c-desc" placeholder="Tell us about your Brand/Product/Service or yourself"></textarea>
+                            
+                            <button type="button" id="c-btn" class="btn-pill">Request a call back</button>
+                            
+                            <p class="contact-mail-text">
+                                Mail at <a href="mailto:bareccemedia@gmail.com">bareccemedia@gmail.com</a>
+                            </p>
                         </form>
                     </div>
                 </div>
@@ -321,28 +632,36 @@
 
     </main>
 
+    <!-- 9. Footer -->
     <footer id="contact-footer" class="footer-reveal">
         <div class="footer-content">
-            <p class="cta-pre">Don't be shy.</p>
-            <a href="mailto:hello@barecce.com" class="footer-email" data-magnetic>hello@barecce.com</a>
+            <p class="cta-pre">Be unapologetically loud</p>
+            
+            <a href="mailto:details@barecce.com" class="footer-email" data-magnetic>Details @ barecce.com</a>
             
             <div class="footer-meta">
                 <div class="footer-col">
-                    <h4>Address</h4>
-                    <p>123 Creative St,<br>Design City, DC</p>
+                    <h4>Barecce Studio</h4>
+                    <p>
+                        2nd Floor, 425, Dudhwali Poll,<br>
+                        Gheekanta, Ahmedabad - 380001
+                    </p>
                 </div>
+                
                 <div class="footer-col">
                     <h4>Socials</h4>
-                    <a href="#">Instagram</a><br>
-                    <a href="#">LinkedIn</a>
+                    <a href="https://www.instagram.com/barecce_culture?igsh=ZjRrYzJyeDF0OTF0" target="_blank">Instagram</a><br>
+                    <a href="https://www.linkedin.com/company/barecce/" target="_blank">LinkedIn</a><br>
+                    <a href="https://pin.it/4bLSa04Ny" target="_blank">Pinterest</a>
                 </div>
+                
                 <div class="footer-col">
                     <h4>Barecce&copy; 2026</h4>
                     <p>Designed by Dynamic Labz</p>
                 </div>
             </div>
         </div>
-        <img src="images/asset5.jpeg" class="footer-mascot" alt="Footer Cat">
+        <img src="images/cat selfie.png" class="footer-mascot" alt="Footer Cat">
     </footer>
 
     <!-- GoToTop Button -->
@@ -358,7 +677,7 @@
     <!-- Theme Switching Button -->
     <div class="theme-toggle-wrap" id="themeBtn" data-magnetic>
         <div class="theme-icon">
-            <i class="fas fa-sun"></i>
+            <i class="fas fa-lightbulb"></i>
         </div>
     </div>
 
