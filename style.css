@@ -272,31 +272,26 @@ body.footer-cursor-mode .c-active {
     mix-blend-mode: difference;
 }
 
-/* .nav-logo-img {
+.nav-logo-img {
     height: 35px;
-    width: 150px;
+    width: 35px;
     object-fit: contain;
     display: block;
     mix-blend-mode: lighten;
-} */
+}
 
 /* ========================
    NAVBAR LOGO UPDATE (Hindi Text)
    ======================== */
-.nav-logo-text {
-    font-family: var(--font-body); /* Poppins supports Hindi */
-    font-weight: 700;              /* Bold weight for logo feel */
-    font-size: 2rem;             /* Adjust size to match previous image height */
-    color: var(--cream);           /* Matches the theme color */
+/* .nav-logo-text {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--cream);
     line-height: 1;
     display: block;
     letter-spacing: 1px;
-}
-
-/* NOTE: We do NOT need the Light Mode "Filter" logic anymore.
-   Since we are using CSS variables (var(--cream)), the color will 
-   automatically swap to Brown when Light Mode is active.
-*/
+} */
 
 /* FIX: Navbar Colors when Menu is Open */
 .navbar.nav-open {

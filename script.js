@@ -457,10 +457,10 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Logo & Brand Identity",
             projects: [
                 { client: "Barecce", src: "images/brand-logo-orange.PNG", type: "image" },
-                { client: "Tara Bakes", src: "images/asset3.jpeg", type: "image" },
-                { client: "Bakers Hub", src: "images/asset1.jpeg", type: "image" },
-                { client: "SNX", src: "images/asset4.jpeg", type: "image" },
-                { client: "Aqua Valley", src: "images/asset2.jpeg", type: "image" },
+                { client: "Tara Bakes", src: "https://placehold.co/600x600/png?text=Tara+Bakes", type: "image" },
+                { client: "Bakers Hub", src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" },
+                { client: "SNX", src: "videos/snx/1769031656754893.MP4", type: "video" },
+                { client: "Aqua Valley", src: "videos/aqua-valley/Aqua Valley reel 4.mp4", type: "video" },
                 { client: "Melo Kidzz", src: "https://placehold.co/600x600/png?text=Melo+Kidzz", type: "image" },
                 { client: "Purvanchal", src: "https://placehold.co/600x600/png?text=Purvanchal", type: "image" },
                 { client: "Russamed", src: "https://placehold.co/600x600/png?text=Russamed", type: "image" }
@@ -469,40 +469,40 @@ document.addEventListener("DOMContentLoaded", () => {
         2: {
             title: "Video Content Strategy",
             projects: [
-                { client: "Aqua Valley", src: "images/asset2.jpeg", type: "image" },
+                { client: "Aqua Valley", src: "videos/aqua-valley/Aqua Valley reel 2 changes.mp4", type: "video" },
                 { client: "Sweetmist", src: "https://placehold.co/600x600/png?text=Sweetmist", type: "image" },
-                { client: "Bakers Hub", src: "images/asset1.jpeg", type: "image" }
+                { client: "Bakers Hub", src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" }
             ]
         },
         3: {
             title: "Event Marketing",
             projects: [
-                { client: "Emprado Beauty Land", src: "images/asset4.jpeg", type: "image" },
-                { client: "Vibe with the Night", src: "https://placehold.co/600x600/png?text=Vibe", type: "image" }
+                { client: "Emprado Beauty Land", src: "videos/emprado/Emprado reel 1 revised.MP4", type: "video" },
+                { client: "Vibe with the Night", src: "https://placehold.co/600x600/png?text=Vibe+with+the+Night", type: "image" }
             ]
         },
         4: {
             title: "Social Media Feed",
             projects: [
-                { client: "Aqua Valley", src: "images/asset2.jpeg", type: "image" },
-                { client: "Aahvi", src: "https://placehold.co/600x600/png?text=Aahvi", type: "image" },
-                { client: "Bakers Hub", src: "images/asset3.jpeg", type: "image" }
+                { client: "Aqua Valley", src: "videos/aqua-valley/Aqua Valley reel 2 changes.MP4", type: "video" },
+                { client: "Aahvi", src: "videos/aahvi/1767615942371132.MP4", type: "video" },
+                { client: "Bakers Hub", src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" }
             ]
         },
         5: {
             title: "Print Media",
             projects: [
-                { client: "Brochure Design", src: "images/asset1.jpeg", type: "image" },
-                { client: "Packaging Mockup", src: "images/asset2.jpeg", type: "image" },
-                { client: "Flyer Design", src: "images/asset4.jpeg", type: "image" }
+                { client: "Brochure Design", src: "https://placehold.co/600x600/png?text=Brochure+Design", type: "image" },
+                { client: "Packaging Mockup", src: "https://placehold.co/600x600/png?text=Packaging+Mockup", type: "image" },
+                { client: "Flyer Design", src: "https://placehold.co/600x600/png?text=Flyer+Design", type: "image" }
             ]
         },
         6: {
             title: "Designs & Creatives",
             projects: [
-                { client: "Social Creative 1", src: "images/service-2.png", type: "image" },
-                { client: "Ad Banner", src: "images/service-3.png", type: "image" },
-                { client: "Campaign Post", src: "images/service-5.png", type: "image" }
+                { client: "Social Creative 1", src: "https://placehold.co/600x600/png?text=Social+Creative", type: "image" },
+                { client: "Ad Banner", src: "https://placehold.co/600x600/png?text=Ad+Banner", type: "image" },
+                { client: "Campaign Post", src: "https://placehold.co/600x600/png?text=Campaign+Post", type: "image" }
             ]
         }
     };
