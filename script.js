@@ -644,4 +644,15 @@ document.addEventListener("DOMContentLoaded", () => {
             window.closeLightbox();
         });
     }
+
+    // ------------------------------------------------
+    // PHONE INPUT VALIDATION (Numbers Only)
+    // ------------------------------------------------
+    const phoneInput = document.getElementById('c-phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+            // Replace any character that is NOT 0-9 with empty string
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    }
 });

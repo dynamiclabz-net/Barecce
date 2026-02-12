@@ -193,7 +193,7 @@
                     <span class="label">[ Who We Are ]</span>
                     
                     <p class="intro-text reveal-text">
-                        A <span class="highlight">creative agency</span> by bunch of <span class="highlight">cultured wizards</span> who believes in thinking next for <span class="highlight">next gen</span>.
+                        A <span class="highlight">creative agency</span> by bunch of <span class="highlight">cultured wizards</span> who believes in thinking next gen for <span class="highlight">next gen</span>.
                     </p>
                     <p class="intro-text reveal-text" style="margin-top: 1rem;">
                         We walk your <span class="highlight">socials</span> so you can run your <span class="highlight">brand</span>.
@@ -594,7 +594,7 @@
                             
                             <ul class="founder-list">
                                 <li class="reveal-text">
-                                    I see Barecce collaborating with MSMEs who’ve hit a halt in growth, engagement, or conversions. There’s a gap when it comes to <span class="highlight-bold">outsourced marketing</span>.
+                                    I see Barecce collaborating with SMEs who’ve hit a halt in growth, engagement, or conversions. There’s a gap when it comes to <span class="highlight-bold">outsourced marketing</span>.
                                 </li>
                                 <li class="reveal-text">
                                     Agencies often fail to deliver the personal touch and freelancers sometimes miss the strategy. That’s the gap I want to fill through Barecce. With clarity, context, and content that actually works.
@@ -636,15 +636,26 @@
                         <form class="simple-form">
                             <input type="text" id="c-name" placeholder="Name">
                             
-                            <input type="tel" id="c-phone" placeholder="Phone">
+                            <div class="phone-input-group">
+                                
+                                <div class="select-wrapper">
+                                    <select id="c-code" class="country-select" aria-label="Country Code">
+                                        <option value="+91">+91</option>
+                                        <option value="+1">+1</option>
+                                        <option value="+44">+44</option>
+                                        <option value="+971">+971</option>
+                                        <option value="+61">+61</option>
+                                        <option value="+33">+33</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down code-icon"></i>
+                                </div>
+
+                                <input type="tel" id="c-phone" placeholder="Phone Number" maxlength="10" inputmode="numeric">
+                            </div>
                             
                             <textarea id="c-desc" placeholder="Tell us about your Brand/Product/Service or yourself"></textarea>
                             
                             <button type="button" id="c-btn" class="btn-pill">Request a call back</button>
-                            
-                            <p class="contact-mail-text">
-                                Mail at <a href="mailto:bareccemedia@gmail.com">bareccemedia@gmail.com</a>
-                            </p>
                         </form>
                     </div>
                 </div>
@@ -658,7 +669,7 @@
         <div class="footer-content">
             <p class="cta-pre">Be unapologetically loud</p>
             
-            <a href="mailto:details@barecce.com" class="footer-email" data-magnetic>Details @ barecce.com</a>
+            <a href="mailto:details@barecce.com" class="footer-email" data-magnetic>details@barecce.com</a>
             
             <div class="footer-meta">
                 <div class="footer-col">
@@ -669,11 +680,25 @@
                     </p>
                 </div>
                 
+                <!-- Socials -->
                 <div class="footer-col">
                     <h4>Socials</h4>
-                    <a href="https://www.instagram.com/barecce_culture?igsh=ZjRrYzJyeDF0OTF0" target="_blank">Instagram</a><br>
+                    <!-- <a href="https://www.instagram.com/barecce_culture?igsh=ZjRrYzJyeDF0OTF0" target="_blank">Instagram</a><br>
                     <a href="https://www.linkedin.com/company/barecce/" target="_blank">LinkedIn</a><br>
-                    <a href="https://pin.it/4bLSa04Ny" target="_blank">Pinterest</a>
+                    <a href="https://pin.it/4bLSa04Ny" target="_blank">Pinterest</a> -->
+
+                    <div class="footer-social-icons">
+                        <a href="https://www.instagram.com/barecce_culture?igsh=ZjRrYzJyeDF0OTF0" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/barecce/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://pin.it/4bLSa04Ny" target="_blank" aria-label="Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+
                 </div>
                 
                 <div class="footer-col">

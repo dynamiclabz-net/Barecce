@@ -2318,30 +2318,84 @@ body.footer-cursor-mode .c-active {
     border-color: var(--orange);
 }
 
-/* Styling for the new Mail Text */
-.contact-mail-text {
-    margin-top: 1.5rem;
-    font-size: 1.1rem;
-    font-family: var(--font-body);
-    opacity: 0.8;
-}
-
-.contact-mail-text a {
-    color: var(--cream);
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px solid transparent;
-    transition: 0.3s;
-}
-
-.contact-mail-text a:hover {
-    color: var(--orange);
-    border-bottom: 1px solid var(--orange);
-}
-
 /* Optional: Improve phone number input visual */
 .simple-form input[type="tel"] {
     letter-spacing: 1px;
+}
+
+/* ========================
+   PHONE INPUT CUSTOMIZATION
+   ======================== */
+.phone-input-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    border-bottom: 1px solid var(--cream);
+    transition: border-color 0.3s ease;
+}
+
+.phone-input-group:focus-within {
+    border-color: var(--orange);
+}
+
+/* Wrapper to hold Select + Icon */
+.select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.country-select {
+    background: transparent;
+    border: none;
+    color: var(--orange);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    padding: 1rem 0; /* Extra right padding for the icon */
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    
+    /* Remove default ugly arrow */
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    min-width: 60px;
+    z-index: 2; /* Sits above the icon so it catches clicks */
+    position: relative;
+}
+
+.country-select option {
+    background-color: var(--brown);
+    color: var(--cream);
+    padding: 10px;
+}
+
+/* The New Dropdown Icon */
+.code-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: var(--orange);
+    pointer-events: none; /* Clicks go through to the select box */
+    z-index: 1;
+}
+
+.phone-input-group input {
+    border-bottom: none !important;
+    padding: 1rem 0;
+    margin: 0;
+    flex: 1; 
+}
+
+/* Theme Swap Fix */
+[data-theme="light"] .country-select option {
+    background-color: #efecce; 
+    color: #423c3b; 
 }
 
 /* ========================
@@ -2421,6 +2475,37 @@ main {
     color: var(--brown);
     text-decoration: none;
     line-height: 1.6;
+}
+
+/* ========================
+   FOOTER SOCIAL ICONS
+   ======================== */
+.footer-social-icons {
+    display: flex;
+    gap: 1.5rem; /* Space between icons */
+    margin-top: 0.5rem;
+}
+
+.footer-social-icons a {
+    font-size: 1.8rem; /* Make icons big and visible */
+    color: var(--brown); /* Inherit footer text color */
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    
+    /* Reset line-height to prevent cutting off */
+    line-height: 1; 
+}
+
+.footer-social-icons a:hover {
+    color: var(--orange); /* Brand color on hover */
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+@media (max-width: 768px) {
+    .footer-social-icons {
+        justify-content: center; /* Center icons on mobile */
+        margin-top: 1rem;
+    }
 }
 
 .footer-mascot {
