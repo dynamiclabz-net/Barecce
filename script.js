@@ -108,14 +108,16 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        // C. Stacking Cards
+        // C. Stacking Cards (ALL DEVICES)
         const cards = gsap.utils.toArray(".service-card");
         cards.forEach((card, i) => {
             ScrollTrigger.create({
                 trigger: card,
-                start: "top top+=120",
-                pin: true,
-                pinSpacing: false,
+                // Start pinning when card hits 120px from top
+                start: "top top+=120", 
+                pin: true, 
+                pinSpacing: false, 
+                // End pinning when the WHOLE section finishes scrolling
                 endTrigger: ".services-section",
                 end: "bottom bottom",
             });
@@ -148,29 +150,33 @@ document.addEventListener("DOMContentLoaded", () => {
         //     }
         // });
 
-        // E. Mega Hero Reveal (VIDEO UPDATE)
-        const heroVideo = document.querySelector(".mega-brand-video");
+        // E. Mega Hero Reveal (MULTI-DEVICE VIDEO UPDATE)
+        // Select ALL videos (both desktop and mobile)
+        const heroVideos = document.querySelectorAll(".mega-brand-video");
         
-        if (heroVideo) {
-            // 1. Start Playing the video immediately when animations init
-            heroVideo.play().catch(e => console.log("Video autoplay failed:", e));
+        if (heroVideos.length > 0) {
+            heroVideos.forEach(video => {
+                // 1. Start Playing
+                // We try to play both; the browser handles the hidden one efficiently.
+                video.play().catch(e => console.log("Video autoplay failed:", e));
 
-            // 2. Animate it fading in and scaling up
-            gsap.fromTo(heroVideo, 
-                { scale: 0.8, opacity: 0 },
-                { scale: 1, opacity: 1, duration: 1.5, ease: "power4.out", delay: 0.5 }
-            );
-            
-            // 3. Parallax Scroll Effect (Moves down as you scroll)
-            gsap.to(heroVideo, {
-                yPercent: 20, 
-                ease: "none",
-                scrollTrigger: {
-                    trigger: "#mega-hero",
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
-                }
+                // 2. Animate (Same animation for both)
+                gsap.fromTo(video, 
+                    { scale: 0.8, opacity: 0 },
+                    { scale: 1, opacity: 1, duration: 1.5, ease: "power4.out", delay: 0.5 }
+                );
+                
+                // 3. Parallax Scroll Effect
+                gsap.to(video, {
+                    yPercent: 20, 
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: "#mega-hero",
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
             });
         }
 
