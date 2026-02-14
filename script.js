@@ -456,64 +456,115 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ------------------------------------------------
-    // 9. PROJECT MODAL DATA & LOGIC (FIXED)
+    // 9. PROJECT MODAL DATA & LOGIC (UPDATED: GALLERY SUPPORT)
     // ------------------------------------------------
+    
+    // DATA STRUCTURE UPDATE: 
+    // Instead of 'src' and 'type', we now use a 'media' array.
+    // You can add as many images/videos as you want for each client.
     const portfolioData = {
         1: {
             title: "Logo & Brand Identity",
             projects: [
-                { client: "Barecce", src: "images/brand-logo-orange.PNG", type: "image" },
-                { client: "Tara Bakes", src: "https://placehold.co/600x600/png?text=Tara+Bakes", type: "image" },
-                { client: "Bakers Hub", src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" },
-                { client: "SNX", src: "videos/snx/1769031656754893.MP4", type: "video" },
-                { client: "Aqua Valley", src: "videos/aqua-valley/Aqua Valley reel 4.mp4", type: "video" },
-                { client: "Melo Kidzz", src: "https://placehold.co/600x600/png?text=Melo+Kidzz", type: "image" },
-                { client: "Purvanchal", src: "https://placehold.co/600x600/png?text=Purvanchal", type: "image" },
-                { client: "Russamed", src: "https://placehold.co/600x600/png?text=Russamed", type: "image" }
+                { 
+                    client: "Barecce", 
+                    media: [
+                        { src: "images/brand-logo-orange.PNG", type: "image" },
+                        { src: "images/brand-logo-white.PNG", type: "image" } // Example 2nd image
+                    ]
+                },
+                { 
+                    client: "Tara Bakes", 
+                    media: [
+                        { src: "https://placehold.co/600x600/png?text=Tara+Bakes+1", type: "image" },
+                        { src: "https://placehold.co/600x600/png?text=Tara+Bakes+Logo", type: "image" }
+                    ]
+                },
+                { 
+                    client: "Bakers Hub", 
+                    media: [{ src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" }]
+                },
+                { 
+                    client: "SNX", 
+                    media: [{ src: "videos/snx/1769031656754893.MP4", type: "video" }]
+                },
+                { 
+                    client: "Aqua Valley", 
+                    media: [{ src: "videos/aqua-valley/Aqua Valley reel 4.mp4", type: "video" }]
+                },
+                { 
+                    client: "Melo Kidzz", 
+                    media: [{ src: "https://placehold.co/600x600/png?text=Melo+Kidzz", type: "image" }]
+                },
+                { 
+                    client: "Purvanchal", 
+                    media: [{ src: "https://placehold.co/600x600/png?text=Purvanchal", type: "image" }]
+                },
+                { 
+                    client: "Russamed", 
+                    media: [{ src: "https://placehold.co/600x600/png?text=Russamed", type: "image" }]
+                }
             ]
         },
         2: {
             title: "Video Content Strategy",
             projects: [
-                { client: "Aqua Valley", src: "videos/aqua-valley/Aqua Valley reel 2 changes.mp4", type: "video" },
-                { client: "Sweetmist", src: "https://placehold.co/600x600/png?text=Sweetmist", type: "image" },
-                { client: "Bakers Hub", src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" }
+                { 
+                    client: "Aqua Valley", 
+                    media: [
+                        { src: "videos/aqua-valley/Aqua Valley reel 2 changes.mp4", type: "video" },
+                        { src: "videos/aqua-valley/Aqua Valley reel 4.mp4", type: "video" } // Example: 2 Videos
+                    ]
+                },
+                { 
+                    client: "Sweetmist", 
+                    media: [{ src: "https://placehold.co/600x600/png?text=Sweetmist", type: "image" }]
+                },
+                { 
+                    client: "Bakers Hub", 
+                    media: [{ src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" }]
+                }
             ]
         },
+        // ... Keep adding 'media: [...]' for other categories (3, 4, 5, 6) similarly ...
         3: {
             title: "Event Marketing",
             projects: [
-                { client: "Emprado Beauty Land", src: "videos/emprado/Emprado reel 1 revised.MP4", type: "video" },
-                { client: "Vibe with the Night", src: "https://placehold.co/600x600/png?text=Vibe+with+the+Night", type: "image" }
+                { client: "Emprado Beauty Land", media: [{ src: "videos/emprado/Emprado reel 1 revised.MP4", type: "video" }] },
+                { client: "Vibe with the Night", media: [{ src: "https://placehold.co/600x600/png?text=Vibe+Event", type: "image" }] }
             ]
         },
         4: {
             title: "Social Media Feed",
             projects: [
-                { client: "Aqua Valley", src: "videos/aqua-valley/Aqua Valley reel 2 changes.MP4", type: "video" },
-                { client: "Aahvi", src: "videos/aahvi/1767615942371132.MP4", type: "video" },
-                { client: "Bakers Hub", src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" }
+                { client: "Aqua Valley", media: [{ src: "videos/aqua-valley/Aqua Valley reel 2 changes.MP4", type: "video" }] },
+                { client: "Aahvi", media: [{ src: "videos/aahvi/1767615942371132.MP4", type: "video" }] },
+                { client: "Bakers Hub", media: [{ src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" }] }
             ]
         },
         5: {
             title: "Print Media",
             projects: [
-                { client: "Brochure Design", src: "https://placehold.co/600x600/png?text=Brochure+Design", type: "image" },
-                { client: "Packaging Mockup", src: "https://placehold.co/600x600/png?text=Packaging+Mockup", type: "image" },
-                { client: "Flyer Design", src: "https://placehold.co/600x600/png?text=Flyer+Design", type: "image" }
+                { client: "Brochure Design", media: [{ src: "https://placehold.co/600x600/png?text=Brochure", type: "image" }] },
+                { client: "Packaging", media: [{ src: "https://placehold.co/600x600/png?text=Packaging", type: "image" }] },
+                { client: "Flyer Design", media: [{ src: "https://placehold.co/600x600/png?text=Flyer", type: "image" }] }
             ]
         },
         6: {
             title: "Designs & Creatives",
             projects: [
-                { client: "Social Creative 1", src: "https://placehold.co/600x600/png?text=Social+Creative", type: "image" },
-                { client: "Ad Banner", src: "https://placehold.co/600x600/png?text=Ad+Banner", type: "image" },
-                { client: "Campaign Post", src: "https://placehold.co/600x600/png?text=Campaign+Post", type: "image" }
+                { client: "Social Creative", media: [{ src: "https://placehold.co/600x600/png?text=Social+Post", type: "image" }] },
+                { client: "Ad Banner", media: [{ src: "https://placehold.co/600x600/png?text=Ad+Banner", type: "image" }] },
+                { client: "Campaign", media: [{ src: "https://placehold.co/600x600/png?text=Campaign", type: "image" }] }
             ]
         }
     };
 
-    // OPEN MODAL
+    // --- STATE VARIABLES FOR LIGHTBOX ---
+    let currentMediaArray = []; // Stores the current list of images/videos
+    let currentMediaIndex = 0;  // Which one are we showing?
+
+    // OPEN MODAL GRID
     window.openProjectModal = function (id) {
         const modal = document.getElementById('project-modal');
         const titleEl = document.getElementById('modal-title');
@@ -522,14 +573,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = portfolioData[id];
         if (!data) return;
 
-        // 1. Pause Main Scroll (Global Lenis)
         if (window.lenis) window.lenis.stop();
-
-        // 2. Lock Body AND HTML to prevent background scroll
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
 
-        // Populate Content
         titleEl.textContent = data.title;
         contentEl.innerHTML = '';
 
@@ -539,26 +586,37 @@ document.addEventListener("DOMContentLoaded", () => {
         data.projects.forEach(proj => {
             const item = document.createElement('div');
             item.className = 'project-item';
-
-            item.style.cursor = 'pointer';
-            item.onclick = () => window.openLightbox(proj.src, proj.type);
+            
+            // Get Thumbnail (First item in media array)
+            const thumb = proj.media[0];
 
             let mediaHtml = '';
-            if (proj.type === 'video') {
-                mediaHtml = `<video src="${proj.src}" autoplay loop muted playsinline style="pointer-events: none;"></video>`;
+            if (thumb.type === 'video') {
+                // Muted video thumbnail
+                mediaHtml = `<video src="${thumb.src}" muted playsinline loop onmouseover="this.play()" onmouseout="this.pause()"></video>`;
             } else {
-                mediaHtml = `<img src="${proj.src}" alt="${proj.client}">`;
+                mediaHtml = `<img src="${thumb.src}" alt="${proj.client}">`;
             }
+
+            // Indicator if multiple images exist
+            let multiIcon = proj.media.length > 1 
+                ? `<div style="position:absolute; bottom:10px; right:10px; background:rgba(246,136,35,0.9); color:#fff; padding:4px 8px; border-radius:4px; font-size:0.7rem;"><i class="fas fa-layer-group"></i> ${proj.media.length}</div>` 
+                : '';
 
             item.innerHTML = `
                 <div class="project-media">
                     ${mediaHtml}
+                    ${multiIcon}
                     <div style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.6); color: #fff; padding: 5px 8px; border-radius: 4px; font-size: 0.8rem;">
                         <i class="fas fa-expand"></i>
                     </div>
                 </div>
                 <div class="project-client-name">${proj.client}</div>
             `;
+
+            // CLICK EVENT: Open Lightbox with ALL media for this client
+            item.onclick = () => window.initLightbox(proj.media);
+
             grid.appendChild(item);
         });
 
@@ -571,88 +629,201 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     };
 
-    // CLOSE MODAL (THIS WAS MISSING!)
     window.closeProjectModal = function () {
         const modal = document.getElementById('project-modal');
         modal.classList.remove('open');
-
-        // Resume Scroll
         if (window.lenis) window.lenis.start();
-
-        // Unlock Body
         document.body.style.overflow = '';
         document.documentElement.style.overflow = '';
     };
 
-    // --- NEW: LIGHTBOX FUNCTIONS ---
-
-    window.openLightbox = function (src, type) {
+    // ------------------------------------------------
+    // 10. UNIFIED LIGHTBOX LOGIC (Fixed & Robust)
+    // ------------------------------------------------
+    
+    // 1. Initialize Lightbox
+    window.initLightbox = function(mediaArray) {
+        currentMediaArray = mediaArray;
+        currentMediaIndex = 0;
+        
         const lightbox = document.getElementById('lightbox');
-        const wrapper = document.getElementById('lightbox-wrapper');
-
-        wrapper.innerHTML = '';
-
-        if (type === 'video') {
-            const video = document.createElement('video');
-            video.src = src;
-            video.controls = true;
-            video.autoplay = true;
-            video.style.maxWidth = "100%";
-            video.style.maxHeight = "90vh";
-            wrapper.appendChild(video);
-        } else {
-            const img = document.createElement('img');
-            img.src = src;
-            wrapper.appendChild(img);
-        }
-
+        // Force display flex via class
         lightbox.classList.add('active');
+        window.updateLightboxContent();
     };
 
+    // 2. Close Lightbox (Updated with Modal Check)
     window.closeLightbox = function () {
         const lightbox = document.getElementById('lightbox');
         const wrapper = document.getElementById('lightbox-wrapper');
+        const video = wrapper ? wrapper.querySelector('video') : null;
 
-        lightbox.classList.remove('active');
+        if (lightbox) lightbox.classList.remove('active');
+        if (video) video.pause();
 
         setTimeout(() => {
-            wrapper.innerHTML = '';
+            if (wrapper) wrapper.innerHTML = '';
+            
+            // --- LOGIC FIX: CHECK FOR MODAL ---
+            // Only unlock scrolling if the Project Modal is ALSO closed.
+            const projectModal = document.getElementById('project-modal');
+            const isModalOpen = projectModal && projectModal.classList.contains('open');
 
-            // Fix focus so modal controls work immediately
-            const modalContent = document.getElementById('modal-content');
-            if (modalContent) {
-                modalContent.focus();
+            if (!isModalOpen) {
+                // Safe to unlock scroll (No modal is open)
+                if (window.lenis) window.lenis.start();
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
             }
+            // If modal is open, we do nothing (keep scroll locked)
+            // -------------------------------------
+
         }, 300);
     };
 
-    // Close on clicking outside
-    document.getElementById('project-modal').addEventListener('click', (e) => {
-        if (e.target.id === 'project-modal') {
-            window.closeProjectModal();
+    // 3. Update Content (Image/Video + Counter)
+    window.updateLightboxContent = function() {
+        const wrapper = document.getElementById('lightbox-wrapper');
+        const counter = document.getElementById('lb-counter');
+        const prevBtn = document.getElementById('lb-prev');
+        const nextBtn = document.getElementById('lb-next');
+        
+        if (!wrapper) return;
+
+        const item = currentMediaArray[currentMediaIndex];
+        const total = currentMediaArray.length;
+
+        wrapper.innerHTML = ''; 
+
+        // Render Media
+        let element;
+        if (item.type === 'video') {
+            element = document.createElement('video');
+            element.src = item.src;
+            element.controls = true;
+            element.autoplay = true;
+            element.playsInline = true;
+            // Style for max fit
+            element.style.maxWidth = "100%";
+            element.style.maxHeight = "85vh";
+        } else {
+            element = document.createElement('img');
+            element.src = item.src;
+            element.style.maxWidth = "100%";
+            element.style.maxHeight = "85vh";
+            element.style.objectFit = "contain";
+        }
+        
+        gsap.fromTo(element, { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.3 });
+        wrapper.appendChild(element);
+
+        // Update Counter
+        if (counter) {
+            counter.textContent = total > 1 ? `${currentMediaIndex + 1} / ${total}` : '';
+            counter.style.display = total > 1 ? 'block' : 'none';
+        }
+
+        // Update Navigation Buttons
+        if (prevBtn && nextBtn) {
+            if (total <= 1) {
+                prevBtn.classList.add('disabled');
+                nextBtn.classList.add('disabled');
+            } else {
+                // Show/Hide based on index
+                if (currentMediaIndex === 0) prevBtn.classList.add('disabled');
+                else prevBtn.classList.remove('disabled');
+
+                if (currentMediaIndex === total - 1) nextBtn.classList.add('disabled');
+                else nextBtn.classList.remove('disabled');
+            }
+        }
+    };
+
+    // 4. Navigation Functions
+    window.nextSlide = function() {
+        if (currentMediaIndex < currentMediaArray.length - 1) {
+            currentMediaIndex++;
+            window.updateLightboxContent();
+        }
+    };
+
+    window.prevSlide = function() {
+        if (currentMediaIndex > 0) {
+            currentMediaIndex--;
+            window.updateLightboxContent();
+        }
+    };
+
+    // ------------------------------------------------
+    // 11. EVENT LISTENERS (Capture Phase - Priority Fix)
+    // ------------------------------------------------
+    // Using 'true' at the end ensures these fire BEFORE anything else blocks them.
+    
+    document.addEventListener('click', function(e) {
+        // A. Close Button Click
+        if (e.target.closest('#lb-close')) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.closeLightbox();
+            return;
+        }
+
+        // B. Overlay Background Click
+        if (e.target.id === 'lightbox') {
+            e.preventDefault();
+            window.closeLightbox();
+            return;
+        }
+
+        // C. Previous Button
+        if (e.target.closest('#lb-prev')) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.prevSlide();
+            return;
+        }
+
+        // D. Next Button
+        if (e.target.closest('#lb-next')) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.nextSlide();
+            return;
+        }
+    }, true); // <--- Capture Phase Enabled
+
+    // Keyboard Shortcuts (Updated for Modal + Lightbox)
+    document.addEventListener('keydown', (e) => {
+        
+        // 1. LIGHTBOX PRIORITY (Check this first)
+        const lightbox = document.getElementById('lightbox');
+        if (lightbox && lightbox.classList.contains('active')) {
+            if (e.key === 'Escape') {
+                window.closeLightbox();
+                return; // STOP HERE (Don't close the modal yet)
+            }
+            if (e.key === 'ArrowRight') window.nextSlide();
+            if (e.key === 'ArrowLeft') window.prevSlide();
+            return;
+        }
+
+        // 2. PROJECT MODAL (Check this second)
+        const projectModal = document.getElementById('project-modal');
+        if (projectModal && projectModal.classList.contains('open')) {
+            if (e.key === 'Escape') {
+                window.closeProjectModal();
+            }
         }
     });
 
     // ------------------------------------------------
-    // FIX: LIGHTBOX CLOSE BUTTON LISTENER
-    // ------------------------------------------------
-    const lightboxCloseBtn = document.querySelector('.lightbox-close');
-    
-    if (lightboxCloseBtn) {
-        lightboxCloseBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent double-firing with overlay
-            window.closeLightbox();
-        });
-    }
-
-    // ------------------------------------------------
-    // PHONE INPUT VALIDATION (Numbers Only)
+    // 12. PHONE INPUT VALIDATION
     // ------------------------------------------------
     const phoneInput = document.getElementById('c-phone');
     if (phoneInput) {
         phoneInput.addEventListener('input', function(e) {
-            // Replace any character that is NOT 0-9 with empty string
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     }
-});
+
+}); // END DOMContentLoaded
