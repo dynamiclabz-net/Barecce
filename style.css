@@ -2550,6 +2550,12 @@ main {
     color: var(--brown);
     text-decoration: none;
     line-height: 1.6;
+    transition: color 0.3s ease; /* Adds a smooth fade effect */
+}
+
+/* This makes the link turn orange on hover */
+.footer-col a:hover {
+    color: var(--orange);
 }
 
 /* ========================

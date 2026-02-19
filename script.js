@@ -467,42 +467,68 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Logo & Brand Identity",
             projects: [
                 { 
-                    client: "Barecce", 
+                    client: "Aqua Valley", 
                     media: [
-                        { src: "images/brand-logo-orange.PNG", type: "image" },
-                        { src: "images/brand-logo-white.PNG", type: "image" } // Example 2nd image
-                    ]
-                },
-                { 
-                    client: "Tara Bakes", 
-                    media: [
-                        { src: "https://placehold.co/600x600/png?text=Tara+Bakes+1", type: "image" },
-                        { src: "https://placehold.co/600x600/png?text=Tara+Bakes+Logo", type: "image" }
+                        { src: "images/portfolio/Aqua Valley/Branding (1).jpg", type: "image" },
+                        { src: "images/portfolio/Aqua Valley/Branding (2).jpg", type: "image" },
+                        { src: "images/portfolio/Aqua Valley/Branding (3).jpg", type: "image" },
+                        { src: "images/portfolio/Aqua Valley/Branding (4).jpg", type: "image" }
                     ]
                 },
                 { 
                     client: "Bakers Hub", 
-                    media: [{ src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" }]
+                    media: [
+                        { src: "images/portfolio/Bakers Hub/Logo Branding.jpg", type: "image" }
+                    ]
                 },
                 { 
-                    client: "SNX", 
-                    media: [{ src: "videos/snx/1769031656754893.MP4", type: "video" }]
+                    client: "Melo Kidzz",
+                    media: [
+                        { src: "images/portfolio/Melo Kidzz/logo0.png", type: "image" },
+                        { src: "images/portfolio/Melo Kidzz/logo1.png", type: "image" },
+                        { src: "images/portfolio/Melo Kidzz/logo2.png", type: "image" },
+                        { src: "images/portfolio/Melo Kidzz/logo3.png", type: "image" },
+                        { src: "images/portfolio/Melo Kidzz/logo4.png", type: "image" },
+                        { src: "images/portfolio/Melo Kidzz/logo5.png", type: "image" },
+                        { src: "images/portfolio/Melo Kidzz/logo6.png", type: "image" }
+                    ]
                 },
                 { 
-                    client: "Aqua Valley", 
-                    media: [{ src: "videos/aqua-valley/Aqua Valley reel 4.mp4", type: "video" }]
+                    client: "Purvanchal Harvest",
+                    media: [
+                        { src: "images/portfolio/Purvanchal Harvest/Logo Branding.jpg", type: "image" },
+                        { src: "images/portfolio/Purvanchal Harvest/Logo Branding_1.jpg", type: "image" }
+                    ]
                 },
                 { 
-                    client: "Melo Kidzz", 
-                    media: [{ src: "https://placehold.co/600x600/png?text=Melo+Kidzz", type: "image" }]
+                    client: "Russamed",
+                    media: [
+                        { src: "images/portfolio/Russamed/branding1.jpg", type: "image" },
+                        { src: "images/portfolio/Russamed/branding2.jpg", type: "image" },
+                        { src: "images/portfolio/Russamed/branding3.jpg", type: "image" },
+                        { src: "images/portfolio/Russamed/branding4.jpg", type: "image" },
+                        { src: "images/portfolio/Russamed/branding5.jpg", type: "image" }
+                    ]
                 },
                 { 
-                    client: "Purvanchal", 
-                    media: [{ src: "https://placehold.co/600x600/png?text=Purvanchal", type: "image" }]
+                    client: "SNX Nails",
+                    media: [
+                        { src: "images/portfolio/SNX Nails/branding (1).jpg", type: "image" },
+                        { src: "images/portfolio/SNX Nails/branding (2).jpg", type: "image" },
+                        { src: "images/portfolio/SNX Nails/branding (3).jpg", type: "image" },
+                        { src: "images/portfolio/SNX Nails/print & branding (4).jpg", type: "image" },
+                        { src: "images/portfolio/SNX Nails/social & branding (5).jpg", type: "image" }
+                    ]
                 },
-                { 
-                    client: "Russamed", 
-                    media: [{ src: "https://placehold.co/600x600/png?text=Russamed", type: "image" }]
+                {
+                    client: "Tara Bakes",
+                    media: [
+                        { src: "images/portfolio/Tara Bakes/branding1.jpg", type: "image" },
+                        { src: "images/portfolio/Tara Bakes/branding2.jpg", type: "image" },
+                        { src: "images/portfolio/Tara Bakes/branding3.jpg", type: "image" },
+                        { src: "images/portfolio/Tara Bakes/branding4.jpg", type: "image" },
+                        { src: "images/portfolio/Tara Bakes/branding5.jpg", type: "image" }
+                    ]
                 }
             ]
         },
@@ -512,50 +538,400 @@ document.addEventListener("DOMContentLoaded", () => {
                 { 
                     client: "Aqua Valley", 
                     media: [
-                        { src: "videos/aqua-valley/Aqua Valley reel 2 changes.mp4", type: "video" },
-                        { src: "videos/aqua-valley/Aqua Valley reel 4.mp4", type: "video" } // Example: 2 Videos
+                        { src: "https://placehold.co/600x600/png?text=Aqua+Vallery", type: "image" }
                     ]
                 },
                 { 
                     client: "Sweetmist", 
-                    media: [{ src: "https://placehold.co/600x600/png?text=Sweetmist", type: "image" }]
+                    media: [
+                        { src: "https://placehold.co/600x600/png?text=Sweetmist", type: "image" }
+                    ]
                 },
                 { 
                     client: "Bakers Hub", 
-                    media: [{ src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" }]
+                    media: [
+                        { src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" }
+                    ]
                 }
             ]
         },
-        // ... Keep adding 'media: [...]' for other categories (3, 4, 5, 6) similarly ...
+        
         3: {
             title: "Event Marketing",
             projects: [
-                { client: "Emprado Beauty Land", media: [{ src: "videos/emprado/Emprado reel 1 revised.MP4", type: "video" }] },
-                { client: "Vibe with the Night", media: [{ src: "https://placehold.co/600x600/png?text=Vibe+Event", type: "image" }] }
+                {
+                    client: "Emprado Events",
+                    media: [
+                        { src: "images/portfolio/Emprado Events/events & prints (1).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (1).png",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (2).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (3).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (4).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (6).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (7).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (10).jpg",
+                        type: "image" }
+                ]
+                }
             ]
         },
         4: {
-            title: "Social Media Feed",
+            title: "Social Media Feed & Creative",
             projects: [
-                { client: "Aqua Valley", media: [{ src: "videos/aqua-valley/Aqua Valley reel 2 changes.MP4", type: "video" }] },
-                { client: "Aahvi", media: [{ src: "videos/aahvi/1767615942371132.MP4", type: "video" }] },
-                { client: "Bakers Hub", media: [{ src: "https://placehold.co/600x600/png?text=Bakers+Hub", type: "image" }] }
+                {
+                    client: "Aqua Valley",
+                    media: [
+                        { src: "images/portfolio/Aqua Valley/AuaValley_Social Media Grid.jpg",type: "image" },
+                        { src: "images/portfolio/Aqua Valley/grid 2.jpg",type: "image" },
+                        { src: "images/portfolio/Aqua Valley/grid 3.jpg",type: "image" }
+                    ]
+                },
+                { 
+                    client: "Aahvi",
+                    media: [
+                        { src: "images/portfolio/Aahvi/social media post (1).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Aahvi/social media post (2).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Aahvi/social media post (3).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Aahvi/social media post (4).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Aahvi/social media post (5).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Aahvi/social media post (6).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Aahvi/social media post (7).jpg",
+                        type: "image" }
+                    ]
+                },
+                { 
+                    client: "Aurum Ayurveda",
+                    media: [
+                        { src: "images/portfolio/Aurum Ayurveda/grid view.jpg", type: "image" },
+                        { src: "images/portfolio/Aurum Ayurveda/grid.jpg", type: "image" },
+                        { src: "images/portfolio/Aurum Ayurveda/grid1.jpg", type: "image" },
+                        { src: "images/portfolio/Aurum Ayurveda/social media post.jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "Bakers Hub",
+                    media: [
+                        { src: "images/portfolio/Bakers Hub/3.jpg", type: "image" },
+                        { src: "images/portfolio/Bakers Hub/4.jpg", type: "image" },
+                        { src: "images/portfolio/Bakers Hub/5.jpg", type: "image" },
+                        { src: "images/portfolio/Bakers Hub/6.jpg", type: "image" },
+                        { src: "images/portfolio/Bakers Hub/SMM GRID & Branding.jpg", type: "image" },
+                        { src: "images/portfolio/Bakers Hub/Social Media.mp4", type: "video" }
+                    ]
+                },
+                { 
+                    client: "Cavallo",
+                    media: [
+                        { src: "images/portfolio/Cavallo/grid(1).jpg", type: "image" },
+                        { src: "images/portfolio/Cavallo/grid.jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "Cream Art",
+                    media: [
+                        { src: "images/portfolio/Cream art/Facebook@300x-100.jpg", type: "image" },
+                        { src: "images/portfolio/Cream art/grid.jpg", type: "image" },
+                        { src: "images/portfolio/Cream art/gridd.jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "Emprado Events",
+                    media: [
+                        { src: "images/portfolio/Emprado Events/social.jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "Kalrav Farm House",
+                    media: [
+                        { src: "images/portfolio/Kalrav Farm House/social1.jpg", type: "image" },
+                        { src: "images/portfolio/Kalrav Farm House/social2.jpg", type: "image" },
+                        { src: "images/portfolio/Kalrav Farm House/social3.jpg", type: "image" },
+                        { src: "images/portfolio/Kalrav Farm House/social4.jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "Lithosphere",
+                    media: [
+                        { src: "images/portfolio/Lithosphere/social media post (1).jpg", type: "image" },
+                        { src: "images/portfolio/Lithosphere/social media post (2).jpg", type: "image" },
+                        { src: "images/portfolio/Lithosphere/social media post (3).jpg", type: "image" },
+                        { src: "images/portfolio/Lithosphere/social media post (4).jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "Melo Kidzz",
+                    media: [
+                        { src: "images/portfolio/Melo Kidzz/social1.jpg", type: "image" },
+                        { src: "images/portfolio/Melo Kidzz/social2.jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "Pro Clean Machine",
+                    media: [
+                        { src: "images/portfolio/Pro Clean Machine/grid.jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "Rashmi Engicon",
+                    media: [
+                        { src: "images/portfolio/Rashmi Engicon/social (1).jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/social (2).jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/social (3).jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/social (4).jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/social (5).jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/social (6).jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/social (7).jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/social (8).jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/social (9).jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/social (10).jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "SNX Nails",
+                    media: [
+                        { src: "images/portfolio/SNX Nails/social & branding (5).jpg", type: "image" }
+                    ]
+                },
+                {
+                    client: "Sweet Mist",
+                    media: [
+                        { src: "images/portfolio/Sweet Mist/social media post.jpg",type: "image" },
+                        { src: "images/portfolio/Sweet Mist/social media post 2.jpg",type: "image" }
+                    ]
+                },
+                {
+                    client: "Tara Bakes",
+                    media: [
+                        { src: "images/portfolio/Tara Bakes/Social media post.jpg", type: "image" },
+                        { src: "images/portfolio/Tara Bakes/Social media post(1).jpg",type: "image" }
+                    ]
+                },
+                {
+                    client: "Upper Crust",
+                    media: [
+                        { src: "images/portfolio/Upper Crust/socials (1).jpg", type: "image" },
+                        { src: "images/portfolio/Upper Crust/socials (2).jpg",type: "image" },
+                        { src: "images/portfolio/Upper Crust/socials (3).jpg",type: "image" }
+                    ]
+                },
+                {
+                    client: "Western Realty",
+                    media: [
+                        { src: "images/portfolio/Western Realty/social0.jpg",type: "image" },
+                        { src: "images/portfolio/Western Realty/social1.jpg",type: "image" },
+                        { src: "images/portfolio/Western Realty/social2.jpg",type: "image" }
+                    ]
+                }
             ]
         },
         5: {
-            title: "Print Media",
+            title: "Design & Print Media",
             projects: [
-                { client: "Brochure Design", media: [{ src: "https://placehold.co/600x600/png?text=Brochure", type: "image" }] },
-                { client: "Packaging", media: [{ src: "https://placehold.co/600x600/png?text=Packaging", type: "image" }] },
-                { client: "Flyer Design", media: [{ src: "https://placehold.co/600x600/png?text=Flyer", type: "image" }] }
+                {
+                    client: "Aahvi",
+                    media: [
+                        { src: "images/portfolio/Aahvi/print work.jpg", type: "image" }
+                    ]
+                },
+                {
+                    client: "Cream Art",
+                    media: [
+                        { src: "images/portfolio/Cream art/print.jpg", type: "image" },
+                        { src: "images/portfolio/Cream art/print1.jpg", type: "image" },
+                        { src: "images/portfolio/Cream art/print2.jpg", type: "image" }
+                    ]
+                },
+                {
+                    client: "Emprado Events",
+                    media: [
+                        { src: "images/portfolio/Emprado Events/events & prints (1).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (1).png",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (2).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (3).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (4).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (6).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (7).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/events & prints (10).jpg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (1).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (2).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (3).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (4).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (5).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (6).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (7).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (8).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (9).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (10).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (11).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (12).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (13).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (14).jpeg",
+                        type: "image" },
+                        { src: "images/portfolio/Emprado Events/print (15).jpeg",
+                        type: "image" }
+                    ]
+                },
+                {
+                    client: "Ethonic",
+                    media: [
+                        { src: "images/portfolio/Ethonic/print1.jpg", type: "image" },
+                        { src: "images/portfolio/Ethonic/print2.jpg", type: "image" },
+                        { src: "images/portfolio/Ethonic/print3.jpg", type: "image" },
+                        { src: "images/portfolio/Ethonic/print4.jpg", type: "image" },
+                        { src: "images/portfolio/Ethonic/print5.jpg", type: "image" },
+                        { src: "images/portfolio/Ethonic/print6.jpg", type: "image" },
+                        { src: "images/portfolio/Ethonic/print7.jpg", type: "image" },
+                        { src: "images/portfolio/Ethonic/print8.jpg", type: "image" },
+                        { src: "images/portfolio/Ethonic/print9.jpg", type: "image" },
+                        { src: "images/portfolio/Ethonic/print10.jpg", type: "image" },
+                        { src: "images/portfolio/Ethonic/print11.jpg", type: "image" }
+                    ]
+                },
+                {
+                    client: "Kalrav Farm House",
+                    media: [
+                        { src: "images/portfolio/Kalrav Farm House/print1.jpg", type: "image" },
+                        { src: "images/portfolio/Kalrav Farm House/print2.jpg", type: "image" },
+                        { src: "images/portfolio/Kalrav Farm House/print3.jpg", type: "image" },
+                        { src: "images/portfolio/Kalrav Farm House/print4.jpg", type: "image" },
+                        { src: "images/portfolio/Kalrav Farm House/print5.jpg", type: "image" },
+                        { src: "images/portfolio/Kalrav Farm House/print6.jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "Lithosphere",
+                    media: [
+                        { src: "images/portfolio/Lithosphere/print1.jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "Rashmi Engicon",
+                    media: [
+                        { src: "images/portfolio/Rashmi Engicon/print0.jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/print1.jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/print2.jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/print3.jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/print4.jpg", type: "image" },
+                        { src: "images/portfolio/Rashmi Engicon/print5.jpg", type: "image" }
+                    ]
+                },
+                { 
+                    client: "SNX Nails",
+                    media: [
+                        { src: "images/portfolio/SNX Nails/print & branding (4).jpg", type: "image" }
+                    ]
+                },
+                {
+                    client: "Sweet Mist",
+                    media: [
+                        { src: "images/portfolio/Sweet Mist/print (1).jpg",type: "image" },
+                        { src: "images/portfolio/Sweet Mist/print (1).png",type: "image" },
+                        { src: "images/portfolio/Sweet Mist/print (3).jpg",type: "image" },
+                        { src: "images/portfolio/Sweet Mist/print (4).jpg",type: "image" },
+                        { src: "images/portfolio/Sweet Mist/print (5).jpg",type: "image" },
+                        { src: "images/portfolio/Sweet Mist/print (6).jpg",type: "image" },
+                        { src: "images/portfolio/Sweet Mist/print (9).jpg",type: "image" }
+                    ]
+                },
+                {
+                    client: "Trendy Kiids",
+                    media: [
+                        { src: "images/portfolio/Trendy Kiids/print0.jpg",type: "image" },
+                        { src: "images/portfolio/Trendy Kiids/print1.jpg",type: "image" },
+                        { src: "images/portfolio/Trendy Kiids/print2.jpg",type: "image" },
+                        { src: "images/portfolio/Trendy Kiids/print3.jpg",type: "image" },
+                        { src: "images/portfolio/Trendy Kiids/print4.jpg",type: "image" },
+                        { src: "images/portfolio/Trendy Kiids/print5.jpg",type: "image" },
+                        { src: "images/portfolio/Trendy Kiids/print6.jpg",type: "image" },
+                        { src: "images/portfolio/Trendy Kiids/print7.jpg",type: "image" }
+                    ]
+                },
+                {
+                    client: "Vibe with the night",
+                    media: [
+                        { src: "images/portfolio/Vibe with the night/print0.jpg",type: "image" },
+                        { src: "images/portfolio/Vibe with the night/print1.jpg",type: "image" },
+                        { src: "images/portfolio/Vibe with the night/print2.jpg",type: "image" },
+                        { src: "images/portfolio/Vibe with the night/print3.jpg",type: "image" },
+                        { src: "images/portfolio/Vibe with the night/print4.jpg",type: "image" },
+                        { src: "images/portfolio/Vibe with the night/print5.jpg",type: "image" },
+                        { src: "images/portfolio/Vibe with the night/print6.jpg",type: "image" },
+                        { src: "images/portfolio/Vibe with the night/print7.jpg",type: "image" },
+                        { src: "images/portfolio/Vibe with the night/print8.jpg",type: "image" }
+                    ]
+                },
+                {
+                    client: "Western Realty",
+                    media: [
+                        { src: "images/portfolio/Western Realty/print0.jpg",type: "image" },
+                        { src: "images/portfolio/Western Realty/print1.jpg",type: "image" },
+                        { src: "images/portfolio/Western Realty/print2.jpg",type: "image" },
+                        { src: "images/portfolio/Western Realty/print3.jpg",type: "image" },
+                        { src: "images/portfolio/Western Realty/print4.jpg",type: "image" }
+                    ]
+                }
             ]
         },
         6: {
-            title: "Designs & Creatives",
+            title: "Website & Digital Design",
             projects: [
-                { client: "Social Creative", media: [{ src: "https://placehold.co/600x600/png?text=Social+Post", type: "image" }] },
-                { client: "Ad Banner", media: [{ src: "https://placehold.co/600x600/png?text=Ad+Banner", type: "image" }] },
-                { client: "Campaign", media: [{ src: "https://placehold.co/600x600/png?text=Campaign", type: "image" }] }
+                {
+                    client: "Aahvi",
+                    media: [
+                        { src: "images/portfolio/Aahvi/website shoot (1).jpg", type: "image" },
+                        { src: "images/portfolio/Aahvi/website shoot (2).jpg", type: "image" },
+                        { src: "images/portfolio/Aahvi/website shoot (3).jpg", type: "image" }
+                    ]
+                },
+                {
+                    client: "ToyzApp",
+                    media: [
+                        { src: "images/portfolio/ToyzApp/Website & Digital Design (1).jpeg", type: "image" },
+                        { src: "images/portfolio/ToyzApp/Website & Digital Design (2).jpeg", type: "image" },
+                        { src: "images/portfolio/ToyzApp/Website & Digital Design (3).jpeg", type: "image" },
+                        { src: "images/portfolio/ToyzApp/Website & Digital Design (4).jpeg", type: "image" },
+                        { src: "images/portfolio/ToyzApp/Website & Digital Design (5).jpeg", type: "image" },
+                        { src: "images/portfolio/ToyzApp/Website & Digital Design (6).jpeg", type: "image" },
+                        { src: "images/portfolio/ToyzApp/Website & Digital Design0.jpeg", type: "image" },
+                        { src: "images/portfolio/ToyzApp/Website & Digital Design1.jpeg", type: "image" },
+                        { src: "images/portfolio/ToyzApp/Website & Digital Design2.jpeg", type: "image" },
+                        { src: "images/portfolio/ToyzApp/Website & Digital Design3.jpeg", type: "image" }
+                    ]
+                }
             ]
         }
     };
