@@ -538,7 +538,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { 
                     client: "Aqua Valley", 
                     media: [
-                        { src: "https://placehold.co/600x600/png?text=Aqua+Vallery", type: "image" }
+                        { src: "https://placehold.co/600x600/png?text=Aqua+Valley", type: "image" }
                     ]
                 },
                 { 
