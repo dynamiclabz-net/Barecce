@@ -968,10 +968,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             let mediaHtml = '';
             if (thumb.type === 'video') {
-                // Muted video thumbnail
-                mediaHtml = `<video src="${thumb.src}" muted playsinline loop onmouseover="this.play()" onmouseout="this.pause()"></video>`;
+                // Added preload="metadata" so videos don't download entirely until played
+                mediaHtml = `<video src="${thumb.src}" muted playsinline loop onmouseover="this.play()" onmouseout="this.pause()" preload="metadata"></video>`;
             } else {
-                mediaHtml = `<img src="${thumb.src}" alt="${proj.client}">`;
+                // CRITICAL FIX: loading="lazy" stops all images from downloading at once.
+                // decoding="async" stops the browser from freezing while processing the images.
+                mediaHtml = `<img src="${thumb.src}" alt="${proj.client}" loading="lazy" decoding="async">`;
             }
 
             // Indicator if multiple images exist
