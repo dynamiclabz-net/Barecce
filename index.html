@@ -36,6 +36,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -638,13 +641,12 @@
                         <h2>Let's build<br>something<br><span class="highlight">Iconic.</span></h2>
                     </div>
                     <div class="contact-right">
-                        <form class="simple-form">
-                            <input type="text" id="c-name" placeholder="Name">
-                            
+                        <form class="simple-form" id="contact-form">
+                            <input type="text" id="c-name" name="user_name" placeholder="Name" required>
+                        
                             <div class="phone-input-group">
-                                
                                 <div class="select-wrapper">
-                                    <select id="c-code" class="country-select" aria-label="Country Code">
+                                    <select id="c-code" name="country_code" class="country-select" aria-label="Country Code">
                                         <option value="+91">+91</option>
                                         <option value="+1">+1</option>
                                         <option value="+44">+44</option>
@@ -654,13 +656,15 @@
                                     </select>
                                     <i class="fas fa-chevron-down code-icon"></i>
                                 </div>
-
-                                <input type="tel" id="c-phone" placeholder="Phone Number" maxlength="10" inputmode="numeric">
+                        
+                                <input type="tel" id="c-phone" name="user_phone" placeholder="Phone Number" maxlength="10" inputmode="numeric"
+                                    required>
                             </div>
-                            
-                            <textarea id="c-desc" placeholder="Tell us about your Brand/Product/Service or yourself"></textarea>
-                            
-                            <button type="button" id="c-btn" class="btn-pill">Request a call back</button>
+                        
+                            <textarea id="c-desc" name="message" placeholder="Tell us about your Brand/Product/Service or yourself"
+                                required></textarea>
+                        
+                            <button type="submit" id="c-btn" class="btn-pill">Request a call back</button>
                         </form>
                     </div>
                 </div>

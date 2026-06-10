@@ -1204,4 +1204,45 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // ------------------------------------------------
+    // 13. EMAILJS INTEGRATION
+    // ------------------------------------------------
+    // Initialize EmailJS with your verified Public Key
+    emailjs.init({
+      publicKey: "U3EcOJloKSEjgTina",
+    });
+
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('c-btn');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop standard page redirect
+            
+            // UI State Shift: Update text for active operation
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = "Sending...";
+            
+            // Dispatch target payload to automated mailer pipeline
+            emailjs.sendForm('service_ajcyc1u', 'template_xhro8os', this)
+                .then(() => {
+                    // Operational success state
+                    submitBtn.innerText = "Request Sent!";
+                    contactForm.reset(); 
+                    
+                    setTimeout(() => { 
+                        submitBtn.innerText = originalBtnText; 
+                    }, 3000);
+                }, (error) => {
+                    // Operational fault tracking
+                    console.error('EmailJS Form dispatch failure:', error);
+                    submitBtn.innerText = "Error! Try Again.";
+                    
+                    setTimeout(() => { 
+                        submitBtn.innerText = originalBtnText; 
+                    }, 3000);
+                });
+        });
+    }
+
 }); // END DOMContentLoaded
